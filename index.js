@@ -5,7 +5,7 @@ var connect = require("connect");
 var semver = require("semver");
 
 var rules = [
-  //"^\/example.html /redirected.html"
+  "^\/example.html /redirected.html"
 ]
 
 var deployed = [
@@ -16,32 +16,25 @@ var deployed = [
 	];
 
 var app = connect()
-  .use(function(req, res, next){
+  .use('/praxis', function(req, res, next){
 
-	var version = req.url.split('/')[1];
-	console.log('valid version: ' + semver.valid(version), 'valid range: ' + semver.validRange(version))
-    
-	var index = deployed.length - 1;
-	for (index; index>=0; index--){
-		if (semver.satisfies(deployed[index], version)) {
-			break;
-		}
-	} 
+	var range = req.url.split('/')[1];
+	var version = semver.maxSatisfying(deployed, range);
 	
-	if (index === -1) {
-		index = deployed.length -1;
+	if (!version) {
+		version = deployed[deployed.length-1]
 	}
-	console.log(index)
-	console.log(deployed[index])
 	
-	rules.push("^/"+version+" /"+deployed[index]);
+	console.log('range ', range, 'version ', version)
+	
+	rules.push("^/praxis/"+range+"/hook.js /"+version);
 	
 	next();
   })
   .use(rewrite(rules))
   .use(function(req, res, next){
 	console.dir(rules)
-	console.log(req.url)
+	console.dir(req.url)
     next();
   })	
   .use(connect.static('public'))
