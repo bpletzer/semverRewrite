@@ -1,12 +1,6 @@
 // ~ tilde
-
-var rewrite = require("connect-url-rewrite");
 var connect = require("connect");
 var semver = require("semver");
-
-var rules = [
-  "^\/example.html /redirected.html"
-]
 
 var deployed = [
 		'1.0.0',
@@ -16,7 +10,7 @@ var deployed = [
 	];
 
 var app = connect()
-  .use('/praxis', function(req, res, next){
+  .use('/praxistipps.chip.de', function(req, res, next){
 
 	var range = req.url.split('/')[1];
 	var version = semver.maxSatisfying(deployed, range);
@@ -25,15 +19,15 @@ var app = connect()
 		version = deployed[deployed.length-1]
 	}
 	
-	console.log('range ', range, 'version ', version)
+	console.log('range ', range, 'validRange', semver.validRange(range), 'version ', version)
 	
-	rules.push("^/praxis/"+range+"/hook.js /"+version);
+	req.url = req.url.replace(range, version);
+	//rules.push("^/praxis/"+range+"/hook.js /"+version);
 	
 	next();
   })
-  .use(rewrite(rules))
+
   .use(function(req, res, next){
-	console.dir(rules)
 	console.dir(req.url)
     next();
   })	
