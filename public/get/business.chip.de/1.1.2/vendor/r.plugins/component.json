@@ -1,0 +1,16 @@
+{
+  "name": "r.plugins",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~1.8.2"
+  },
+  "gitHead": "e1a67aebe2c36328338731b7c9746223919b07d5",
+  "readme": "bower-r.plugins\r\n============",
+  "readmeFilename": "README.md",
+  "_id": "r.plugins@0.1.0",
+  "description": "bower-r.plugins\r ============",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git/FE/fep-requirejs-plugins.git"
+  }
+}

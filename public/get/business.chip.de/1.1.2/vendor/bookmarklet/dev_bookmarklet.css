@@ -1,0 +1,100 @@
+.fedtf, .fedtable, .fedbuttons, #fedform, #slct, #fedlabel, #fedtextload, #feda, #slct, #uselabel{
+    background:none;
+    border:none;
+    bottom:auto;
+    clear:none;
+    cursor:default;
+    float:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:medium;
+    font-style:normal;
+    font-weight:normal;
+    height:auto;
+    left:auto;
+    letter-spacing:normal;
+    line-height:normal;
+    max-height:none;
+    max-width:none;
+    min-height:0;
+    min-width:0;
+    overflow:visible;
+    position:static;
+    right:auto;
+    text-align:left;
+    text-decoration:none;
+    text-indent:0;
+    text-transform:none;
+    top:auto;
+    visibility:visible;
+    white-space:normal;
+    width:auto;
+    z-index:auto;
+}
+
+.fedtf {
+    width: 89%;
+    color: black;
+    background-color: #ffffff;
+    border: 3px solid #808080;
+}
+
+#feda{
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.fedtable {
+    width: 100%;
+    margin: auto;
+    color: white;
+}
+.fedbuttons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px dotted white;
+    color: #d3d3d3;
+}
+#fedform {
+    color: #ffffff;
+    margin: 20px auto;
+    border: 1px solid #FFF;
+    position: relative;
+    z-index: 9999;
+    width: 300px;
+}
+#fedoverlay {
+    background-color: #000;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+#slct {
+    width: 130px;
+    background-color: #ffffff;
+    border: 3px solid #808080;
+}
+#fedlabel {
+    margin: 5px auto 10px;
+    text-align: center;
+    font-weight: bold;
+}
+#fedtextload{
+    background-color: #555555;
+    visibility:hidden;
+    position: absolute;
+    text-align: center;
+}
+
+#uselabel{
+    text-align: center;
+    color: #FFFFFF;
+}

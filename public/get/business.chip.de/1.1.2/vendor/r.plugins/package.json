@@ -1,0 +1,19 @@
+{
+  "name": "device",
+  "version": "0.1.0",
+  "author": {
+    "name": "swood"
+  },
+  "description": "bower-device\r =====================",
+  "devDependencies": {
+    "bower": "~0.6.8",
+    "grunt": "0.4.0rc2",
+    "grunt-contrib-copy": "~0.3.2",
+    "grunt-bower-task": "~0.1.0",
+    "FEA-grunt-tag": "git+ssh://git@github.com:CXO/FEA-grunt-tag.git#0.1.1"
+  },
+  "readme": "bower-device\r\n=====================",
+  "readmeFilename": "README.md",
+  "gitHead": "8dac3175dab10a3d3d3efb9b951c538410b68cfc",
+  "_id": "device@0.1.0"
+}

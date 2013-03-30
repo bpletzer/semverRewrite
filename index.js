@@ -1,10 +1,8 @@
 // ~ tilde
 var connect = require("connect");
+var connectESI = require ('connect-esi');
 
 var appFolder = __dirname+'/public/get/';
-
-var connectESI = require ('connect-esi')
-
 
 var app = connect()
 
