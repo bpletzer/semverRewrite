@@ -3,7 +3,11 @@ var connect = require("connect");
 
 var appFolder = __dirname+'/public/get/';
 
+var connectESI = require ('connect-esi')
+
+
 var app = connect()
+
 	.use("/get", require("./filter/semverRewrite")(appFolder))
 
 	.use("/list", require("./versions").list(appFolder))
@@ -13,6 +17,8 @@ var app = connect()
 	.use("/activate", require("./versions").activate(appFolder))
 	
 	.use("/deactivate", require("./versions").deactivate(appFolder))
+
+	.use (connectESI.setupESI())
 
   .use(function(req, res, next){
 
