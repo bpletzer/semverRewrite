@@ -1,0 +1,452 @@
+article {
+  .column(8);
+}
+aside {
+  .column(4);
+}
+
+#app .download-button a{
+  width:198/@em;
+  float:right;
+  margin-top:3/@em;
+  margin-right:1/@em;
+  .buttonDownload(@em);
+  position:relative;
+}
+
+#app .download-button small {
+  @lem:11em;
+  position: absolute;
+  display:block;
+  text-align: center;
+  top:17/@lem;
+  text-transform:none;
+  width:100%;
+  .transparency(6);
+}
+
+#app header:hover .download-button a{
+  .buttonDownloadHover(@em);
+}
+#app .download-button a:hover{
+  margin-top:3/@em;
+  margin-right:1/@em;
+  .shadow(1);
+}
+header {
+  .row();
+  margin-bottom:20/@em;
+}
+
+#app article figure a{
+  float:left;
+  .rounded(30);
+  .drop-shadow(0, 2px, 3px, 2/6);
+  border-left:1/@em solid #ddd;
+  border-top:1/@em solid #ddd;
+  border-right:1/@em solid #aaa;
+  width:175/@em;
+	position: relative; // fuer die APP DES TAGES Kennzeichnung
+	overflow: hidden;
+}
+
+#app article figure img{
+  width:100%;
+  .rounded(28);
+  display:block
+}
+#app article figure {
+  .column(2.5);
+  min-height:185/@em;
+}
+#app header .text-body{ 
+  .column(5.5);
+  min-height:180/@em;
+}
+//#app header {cursor:pointer;}
+#app header h2 {
+  @lem:20em;
+  .h1();
+  margin-bottom:6/@lem;
+  text-decoration:none;
+  min-height:65/@em;
+//  height:auto !important;
+  height:65/@em;
+}
+#app header h2 a {
+    color: @dark-grey;
+    letter-spacing: 0;
+}
+#app header h2 a:hover, #app header:hover h2 a {color:@chip-blue;}
+#app header h2 a:hover{text-decoration:underline;}
+
+#app header h3{
+  font-size:11/@em;
+  @lem:11em;
+  color:@text-grey;
+  margin-bottom:4/@lem;
+  margin-top:2/@lem;
+  font-weight:normal;
+
+}
+#app header .info-ratings{
+  @lem:13em;
+  margin:7/@lem 0 10/@lem 0;
+  height:15/@lem;
+}
+
+#app header .rating{
+  @lem:13em;
+  font-size:16/@lem;
+}
+
+#app header .info {
+  @lem:13em;
+  font-size:13/@em;
+  line-height:15/@lem;
+}
+#app header .date{
+  @lem:11em;
+  margin:0 0 4/@lem;
+  font-size: 11/15em;
+  color:@light-grey;
+  display:block;
+}
+#app header .price{
+  font-size: 15/@em;
+  @lem:15em;
+  margin:0;
+  font-weight: bold;
+  color:@chip-blue;
+  display:block;
+  padding:6/@lem 0 0;
+}
+
+#app header .info-price{
+  font-size: 15/@em;
+  @lem:15em;
+  width:200/@lem;
+  float:left;
+}
+
+#app .share {clear:both;height:30/@em;}
+
+
+#app section.facts  {
+  margin-bottom:18/@em;
+  clear:both;
+}
+#app section.facts li {
+  font-size:12/@em;
+  @lem:12em;
+  border-top:1/@lem solid @light-border;
+  padding:4/@lem 6/@lem 8/@lem;
+  display: block;
+  overflow:hidden;
+}
+#app section.facts ul{
+  border:1/@em solid @light-border;
+  border-top:0;
+  .rounded-bottom-left(4);
+  .rounded-bottom-right(4)
+}
+#app section.facts h5, #app section.facts h3{
+  font-size:13/@em;
+  @lem:13em;
+  border:1/@lem solid @light-border;
+  padding:7/@lem 6/@lem;
+  .rounded-top-left(4);
+  .rounded-top-right(4);
+  border-bottom:1/@lem solid #fff;
+  .verticalGradient(#fff, #f3f3f3, 0, 100%);
+}
+#app section.facts span.name {
+  margin:0;
+  padding:0 10/300*100% 0 0;
+  width:120/300*100%;
+  float:left; 
+}
+#app section.facts li {
+  @lem:12em;
+  line-height:17/@lem;
+}
+
+#app section.facts span.value {
+  margin:0;
+  width:170/300*100%;
+  float:right;
+}
+#app section.facts span.value {
+  color:#000;
+}
+#app section.facts div span.value {
+  float: none;
+  width: auto;
+}
+
+#app .screenshots {clear:both;}
+#app .screenshots h3 { 
+  font-size:13/@em;
+  @lem:13em;
+  border:1/@lem solid @light-border;
+  padding:7/@lem 6/@lem;
+  margin:0;
+  .rounded-top-left(4);
+  .rounded-top-right(4);
+  border-bottom:1/@lem solid #fff;
+  .verticalGradient(#fff, #f3f3f3, 0, 100%);
+  font-weight:bold;
+}
+
+#app .scroll-container {
+  display:block;
+  width:auto;
+  border:1/@em solid @light-border;
+  .rounded-bottom-left(4);
+  .rounded-bottom-right(4);
+  height:215/@em;
+}
+#app .jspContainer {
+  height:206/@em !important;
+  width:98% !important;
+  margin:0 1% !important;
+}
+
+#app #testscreenshot {
+    width:100% !important;
+}
+
+#app section.screenshots ul.slideshow{
+  border-top:0;
+  /*font-size: 0px; // entfernt das white-space zwischen LIs*/
+  /*letter-spacing: -5px; // entfernt das white-space zwischen LIs (safari)*/
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding:8/@em 0 8/@em;
+}
+#app section.screenshots ul.slideshow li {
+  display: inline;
+  letter-spacing: -5px; // entfernt das white-space zwischen LIs (safari)
+  margin-right:8/@em;
+}
+#app section.screenshots ul.slideshow li:last-child {
+  margin-right:0;
+}
+#app section.screenshots ul.slideshow a {
+  font-size: 13px;
+}
+#app section.screenshots ul.slideshow img {
+//  margin-right:8/@em;
+}
+// ***** zoom icon über bilder *****************************************************************************************
+#app section.screenshots ul.slideshow li a {
+  position: relative;
+  height: 100%;
+  display: inline-block;
+}
+#app section.screenshots ul.slideshow li:first-child a:before {
+  content: url('../images/zoom.png');
+  opacity: 0.8;
+  position: absolute; top: 50%; left: 50%;
+  margin: -13.5px 0 0 -17.5px;
+}
+
+#app section.article-body {
+  margin:10/@em 0;
+  clear:both;
+}
+#app section.article-body p{
+  font-size:14/@em;
+  @lem:14em;
+  margin-bottom:22/@lem;
+}
+#app .fazit{
+  @lem:14em;
+  border-left:5/@lem solid #666;
+  padding-left:16/@lem;
+}
+#app .facts .body{
+  border:1/@em solid @light-border;
+  .rounded-bottom-left(4);
+  .rounded-bottom-right(4);
+  padding: 0 6/@em 11/@em;
+} 
+#app .facts h3 img {
+  position:relative;
+  top:2/@em;
+}
+#app section.article-body .body p{
+  margin-bottom:0;
+} 
+#app section.article-body h1{
+  .h1();
+  @lem:26em;
+  margin-top:8/@lem;
+}
+
+#app section.article-body p.intro{
+    color: #000000;
+    font-weight: bold;
+    @lem: 14em;
+    line-height: 20/@lem;
+} 
+
+
+//#app section.article-body .facts h3 img {
+//  position:absolute;
+//  @lem:14em;
+//  top:6/@lem;
+//  left:8/@lem;
+//  margin:0;
+//}
+//#app section.article-body .teaser-title h3{
+//  font-size:11/@em;
+//  @lem:11em;
+//  margin:0;
+//  height:28/@lem;
+//  padding-left:4/@lem;
+//}
+//#app section.article-body h3{
+//  font-size:14/@em;
+//  @lem:14em;
+//  font-weight:bold;
+//  margin:0;
+//}
+//
+//#app section.article-body  h3 img{
+//  @lem:11em;
+//  margin:-5/@lem 0 0 2/@lem;
+//}
+//#app section.article-body  h3 .headline-wrapper{
+//  @lem:11em;
+//  padding:6/@lem 4/@lem 0 0;
+//}
+//#app section.article-body .facts h3 {
+//  @lem:14em;
+//  padding:4/@lem 0 4/@lem 28/@lem;
+//  position:relative;
+//}
+
+
+#app section.article-body h4{
+  .h4();
+  font-weight: bold; // overwrite font-weight from .h4()
+  @lem: 14em;
+  margin: 11/@lem 0 0; // overwrite margin from .h4()
+} 
+#app .social-features {
+  .row(visible);
+  margin-bottom:18/@em;
+  min-height: 4em;
+}
+
+#app .social-buttons {
+  .column(2.5,visible);
+}
+#app .fbClass, #app .gpClass {
+  float:left;
+  margin-left:16/@em;
+}
+#app .store-ratings {
+  .column(5.5);
+}
+#app .store-ratings .rating {
+  font-size:16/11em;
+  display:inline-block;
+  float:none;
+  margin-bottom:-2/@em;
+}
+#app .store-ratings .itunes-actual{
+  font-size:11/@em;
+  @lem:11em;
+  border-style:solid;
+  border-color:#efefef;
+  display:block;
+  height:14/@lem;
+  line-height:11/@lem;
+  border-width:1/@lem 1/@lem 0;
+  .rounded-top-left(3, @lem);
+  .rounded-top-right(3, @lem);
+  padding:10/@lem 12/@lem 8/@lem;
+}
+#app .store-ratings .itunes-all{
+  font-size:11/@em;
+  @lem:11em;
+  border-style:solid;
+  border-color:#efefef;
+  display:block;
+  height:14/@lem;
+  line-height:11/@lem;
+  border-width:0 1/@lem 1/@lem;
+  .rounded-bottom-left(3, @lem);
+  .rounded-bottom-right(3, @lem);
+  padding:0 12/@lem 14/@lem;
+}
+
+#app .rating-chip {
+    display: inline-block;
+    float: none;
+    vertical-align: -20%;
+}
+
+#app .breadcrumbs {
+  margin-bottom: 5/@em;
+  margin-left: 5/@em;
+}
+#app .breadcrumbs ul {
+    display: block;
+}
+
+// ***** APP DES TAGES Kennzeichnung ***********************************************************************************
+.app-des-tages_ribbon {
+    // FIXME: determine if elements.less or browser-stacks.less is responsible for rotation and transform-origin, implement
+    //        the code as needed and replace the following two functions :: sw
+    -webkit-transform: rotate(-45deg) translate3d( 0, 0, 0); // translate3d as an attempt to correct chrome (in windows) text rendering issues
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+
+    height: 50%;
+    position: absolute; left: -5%; top: -5%;
+    width: 50%;
+}
+// ***** APP DES TAGES :: an element used for situations where space is limited ****************************************
+.app-des-tages_ribbon br {
+    display: none;
+}
+// ***** APP DES TAGES :: the ribbon itself ****************************************************************************
+.app-des-tages_ribbon .app-des-tages_link {
+    .verticalGradient(#1f69b4, #185491);
+    box-shadow: 0px 0px 2px #000000;
+    color: white;
+    font-size: 12/@em;
+    margin-left: -50%;
+    margin-top: 1em;
+    padding: 16/@em 0 8/@em 0;
+    text-align: center;
+    width: 300%;
+}
+// ***** APP DES TAGES :: alternate display for non-current apps des tages *********************************************
+.app-des-tages_week .app-des-tages_link {
+//    green
+    .verticalGradient(#23bf47, #1a8f35);
+}
+.app-des-tages_past .app-des-tages_link {
+//    silver
+    .verticalGradient(#afafaf, #8f8f8f);
+}
+// ***** APP DES TAGES :: date when the particular app was app des tages ***********************************************
+.app-des-tages_ribbon .app-des-tages_date {
+    font-size: 10/@em;
+    line-height: 1.2em;
+    display: none;
+}
+

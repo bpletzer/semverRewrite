@@ -1,0 +1,29 @@
+/* Within Modules real css will be written */
+body {
+  background: @body-color;
+}
+.wrapper{
+  float:none;
+  margin: 0 auto;
+  width: (((@column + @gutter * 2) * 8) + @gutter * 2)/@em;
+}
+#container {
+  padding: 0 @gutter/@em;
+  width: ((@column + @gutter * 2) * 8)/@em;
+  margin: 0 auto;
+  background: @page-color;
+  float:none;
+}
+.main {
+  padding-bottom:18/@em;
+}
+
+.show-desktop, .hide-tablet, .show-mobile {
+  display:none ! important;
+}
+.hide-desktop, .show-tablet, .hide-mobile {
+  display:inline-block ! important;
+}
+#currpage {
+  font-size: 301px;
+}

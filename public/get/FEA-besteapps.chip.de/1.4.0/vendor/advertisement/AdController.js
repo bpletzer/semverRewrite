@@ -1,0 +1,1 @@
+define(["require","advertisement/config","./AdSystem","vendor/core/System"],function(e,t,n,i){var r=function(){var e;i.extend(n,i);for(e in t._eventMap)i.subscribeEvent(n,t,e)};return{init:r}});

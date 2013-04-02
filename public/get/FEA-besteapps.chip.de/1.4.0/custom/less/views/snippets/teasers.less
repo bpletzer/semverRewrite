@@ -1,0 +1,829 @@
+// ##### 1 :: teaser container styles ( besteapps.chip.de ) ############################################################
+// ##### 1.1 :: main teaser containers #################################################################################
+.teaser-container {
+  padding-bottom: 6/@em;
+  //padding-top: 10/@em;
+}
+.teaser-container.dual,
+.teaser-container.multi {
+  .row();
+}
+
+// ##### 1.2 :: teaser group ###########################################################################################
+.teaser-container.dual .teaser-group {
+  .column(4.5);
+//  border-bottom: solid 1px #ccc;
+//  margin-top: -10px;
+//  padding-top: 10px;
+}
+.teaser-container.dual .teaser-group .teaser:last-child {
+//  border-bottom: none;
+}
+.teaser-container.dual .dualWrapper {
+  display: inline-block;
+}
+// ##### 1.2.1 teaser group; allow space while also displaying shadow ##################################################
+.teaser-container.dual .teaser-group {
+  margin-top: -10/@em;
+  padding-top: 10/@em;
+}
+
+// ##### 1.3 :: teaser floating list ###################################################################################
+.teaser-container.split-list {
+  padding-top: 0;
+}
+.teaser-container.split-list li {
+  .column(4.5);
+}
+
+// ##### 1.4 :: teaser floating list ( ex: homepage, four-column, small teasers ) ######################################
+.teaser-container.multi li {
+  .column(2.25);
+}
+
+// ##### 1.5 :: teaser header; full width when directly inside teaser-container ########################################
+.teaser-container > .teaser-title {
+  .column(9);
+}
+
+
+// ##### 2 :: teaser header title ######################################################################################
+.teaser-title {
+  border:1px solid #efefef;
+  .rounded(3);
+  @lem:26em;
+  margin-bottom:8/@lem;
+}
+.teaser-title h3 {
+  @lem:14em;
+  .h4();
+  height: 30/@lem;
+  margin: 0;
+  position: relative;
+}
+
+.teaser-title.author {
+    @lem:14rem;
+    padding: 5/@lem;
+}
+.teaser-title.author h3 {
+    font-size: 11/@em;
+    display: table;
+    width: 100%;
+}
+.teaser-title.author h3 * {
+    display: table-cell;
+    vertical-align: middle;
+    table-layout: fixed;
+}
+
+.teaser-title.author h3 span.holder-icon {
+    width: 22px;
+    vertical-align: top;
+}
+.teaser-title.author h3 span.holder-title {
+    @lem:14rem;
+    padding-left: 5/@lem;
+}
+.teaser-title.author h3 a {
+    text-align: right;
+}
+
+.teaser-title h3 .headline-wrapper {
+  @lem:14em;
+  color: @text-grey;
+  text-decoration: none;
+  display: block;
+  line-height: 20/@lem;
+  height: 24/@lem;
+  padding: 4/@lem 5/@lem 5/@lem 0;
+  .overflow-ellipsis();
+}
+.teaser-title h3 a.headline-wrapper {
+  @lem:14em;
+  padding-right: 74/@lem;
+}
+.teaser-title h3 .headline-wrapper img {
+  @lem:14em;
+  display: inline;
+  margin: 0/@lem 2/@lem 5/@lem 6/@lem;
+  .shadow(1, 1, 1, #fff, @lem);
+  vertical-align: middle;
+  :hover {
+    border: 0;
+  }
+}
+.teaser-title h3 a.headline-wrapper:hover {
+  color: @chip-blue;
+  text-decoration: none;
+}
+.teaser-title h3 .more {
+  display:block;
+  .h5(15em); //parent em
+  font-weight:normal;
+  @lem:12em;
+  position: absolute;
+  background: #fafafa;
+  right: 10/@lem;
+  top: 4/@lem;
+  padding: 2/@lem 5/@lem;
+  border: solid 1px @chip-blue;
+  color: @chip-blue;
+  .rounded();
+  .transparency(0);
+  .transition(opacity);
+}
+.teaser-title h3:hover .more {
+  border-color:  @chip-blue;
+  .shadow(0, 0, 0, rgba(0, 0, 0, 0), @em);
+  .transparency(10);
+}
+// ##### 2.1 :: link title ######################################################################################
+.link-title {
+//  .verticalGradient(#ffffff, #f2f2f2);
+//  .shadow(0, 4, 0, rgba(0, 0, 0, 0.175), @em);
+//  border-width:0 0 1px;
+//  .rounded(0);
+//  border-bottom: 1px solid #ffffff;
+//  font-weight: bold;
+//  position: relative;
+//  height: 30/@em;
+//  z-index:3;
+//  :hover {
+//    .shadow(0, 4, 0, rgba(0, 0, 0, 0.182), @em);
+//    border-bottom: 1px solid #ffffff;
+//  }
+}
+
+.link-title h3 {
+//  font-weight:bold;
+}
+// ##### 3 :: teaser styles ( univeral ) ###############################################################################
+// ##### 3.1 :: teaser element #########################################################################################
+.teaser {
+//  border-bottom: 1/@em solid #fff;
+//  border-top: 1/@em solid #efefef;
+  border-bottom: 1/@em solid #efefef;
+  clear: both;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0 0 8/@em 0;
+  position: relative;
+  //width: 100%;
+}
+.teaser.app-large {
+//  border: none;
+  padding: 10/@em 0;
+}
+.teaser.app-small {
+  width: 100%;
+  border: none;
+  clear: none;
+}
+//.teaser-split-list .teaser {
+//  .column(4.5);
+//  min-height:106/@em;
+//  width:351px;
+//  margin-right:-5px;
+//  clear: none;
+//}
+.teaser.app-large,
+.teaser.app-small,
+.teaser.app-standard,
+.teaser.app-text-only {
+    padding-top: 8/@em;
+}
+.teaser.app-search {
+    padding-bottom: 4/@em;
+    padding-top: 4/@em;
+}
+
+// ##### 3.1.1 :: teaser element hover effects #########################################################################
+.teaser:hover {
+  .verticalGradient(#fff, #eee, 70%, 100%);
+  border-bottom-color:#bcbcbc;
+  border-left-color:#efefef;
+  border-right-color:#ddd;
+}
+.teaser.app-small:hover {
+  background: none;
+}
+
+
+//.teaser.listing,
+//.teaser.listingnoimg {
+//  .column(4.5);
+//  position:relative;
+//  border-top:1/@em solid #efefef;
+//  border-bottom:1/@em solid #fff;
+//  min-height:92/@em;
+//  padding-bottom:14/@em;
+//
+//}
+//.teaser.app-large {
+//  padding: 10/@em 0;
+//  height:180px;
+//  clear:both;
+//}
+//.teaser.listingnoimg {
+//  min-height: 0;
+//  padding-bottom: 6/@em;
+//}
+//.teaser.small {
+//  float: left;
+//  .column(2.25);
+//  padding-bottom:6/@em;
+//  position:relative;
+//}
+//
+
+/*
+.teaser.app-large {
+  padding: 10/@em 0;
+  overflow:hidden;
+  clear:both;
+}
+.teaser.listingnoimg {
+  min-height: 0;
+  padding-bottom: 6/@em;
+}
+.teaser.small {
+  float: left;
+  .column(2.25);
+}
+*/
+// ##### 3.2 :: teaser element rank ####################################################################################
+.teaser .rank {
+//  float:left;
+//  width:100%;
+  font-size: 11/@em;
+//  height:11/@em;
+  padding: 6/11em 0 6/11em 3/11em;
+//  margin:0;
+//  overflow:hidden;
+//  margin-left: 10/@em;
+}
+.single-digits .rank {
+  float: left;
+  margin-right: 5/@em;
+  padding-top: 5/@em;
+}
+
+// ##### 3.3 :: teaser element image  ##################################################################################
+// ##### 3.3.1 :: teaser element image; container ######################################################################
+.teaser figure {
+  width: 60/341*100%;
+//  margin:0 10/341*100% 0 18/341*100%;
+  border: 2/@em solid @price-grey;
+  .rounded(12);
+  float: left;
+  margin: 0 10/@em 0 5/@em;
+//  height: 60px;
+  overflow: hidden;
+}
+.teaser.app-large figure {
+  width: 175/@em;
+  height: 175/@em;
+  .rounded(32);
+}
+.teaser.app-small figure {
+  width: 60/@em;
+  height: 60/@em;
+  margin: 19/15em 6/@em 0 10/@em;
+}
+.teaser.app-search figure {
+    width: 48/@em;
+}
+.single-digits figure {
+  margin-left: 0;
+}
+.teaser:hover figure {
+  border-color: @light-grey;
+}
+
+// ##### 3.3.2 :: teaser element image; container > anchor #############################################################
+.teaser figure a {
+    background: url('../images/nopic-60x60.png') no-repeat scroll center transparent;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    .rounded(8);
+    .shadow(1, 1, -1, #ccc);
+    white-space: nowrap;
+}
+.teaser figure a img {
+    background-color: #ffffff;
+}
+// when an icon
+.teaser figure a .noimg {
+    max-width: 100%;
+    visibility: hidden;
+}
+.teaser.app-large figure a {
+    .rounded(31);
+}
+.teaser.special figure a {
+    background: url('../images/nopic-351x105.png') no-repeat scroll center transparent;
+}
+
+// ##### 3.3.3 :: teaser element image; container > anchor > img #######################################################
+.teaser figure img {
+    display: inline-block;
+    font-size: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+// ##### 3.4 :: teaser element text-body ###############################################################################
+// ##### 3.4.1 :: teaser element text-body; container ##################################################################
+.teaser .text-body {
+    margin-left: 10/@em;
+    overflow: hidden; // damit die Sterne nicht unter dem Bild rutschen
+}
+.teaser.app-large .text-body {
+  margin-top: 5/@em;
+}
+.teaser.app-small .text-body {
+  margin-top:19/15em;
+}
+
+// ##### 3.4.2 :: teaser element text-body; container > description paragraph ##########################################
+.teaser .text-body p {
+  display: none;
+}
+.teaser.app-large .text-body p {
+    display: block;
+    @lem: 12em;
+    line-height: 16/@lem;
+    max-height: 6.7em;
+    overflow:hidden
+}
+
+
+// ##### 3.4.3 :: teaser element text-body; container > header group ###################################################
+.teaser hgroup {
+//  height:34/@em;
+  overflow:hidden;
+}
+.teaser.app-small hgroup {
+//  height: auto;
+  left: 10/@em;
+  position: absolute;
+  right: 0;
+  top: 5/@em;
+}
+
+// ##### 3.4.4 :: teaser element text-body; container > title ##########################################################
+.teaser .title {
+  .h5();
+    font-weight: normal; // overwrite font-weight:normal from .h5()
+  @lem:13em;
+  height:19/@lem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.teaser.app-large .title {
+//  font-weight: bold;
+//  margin-top: 0.25em;
+}
+//.teaser.app-small .title {
+//  @lem:15em;
+//  margin-left: 10/@lem;
+//  margin-bottom: 4/@lem;
+//}
+.teaser .title a {
+  @lem:15em;
+//  font-weight:normal;
+  display: block;
+  .overflow-ellipsis();
+}
+//.teaser.app-large .title,
+//.teaser.listing .title,
+//.teaser.listingnoimg .title {
+//  margin-top: 0;
+//  margin-bottom: 0;
+//  max-width:275/15em;
+//}
+
+// ##### 3.4.5 :: teaser element text-body; container > category/operating system ######################################
+.teaser .category,
+.teaser .os {
+  font-size:11/@em;
+  @lem:11em;
+  font-weight: normal;
+  color:@light-grey;
+  height:13/@lem;
+  .overflow-ellipsis();
+  margin-top:1/@lem;
+}
+.teaser .category,
+.teaser.app-large .os {
+  display: block;
+}
+.teaser .os {
+  display: none;
+}
+.teaser .os {
+  height:14/11em;
+}
+
+// ##### 3.4.6 :: teaser element text-body; container > info container #################################################
+.teaser .info {
+  padding-top:1/@em;
+  height:15/@em;
+  overflow:hidden;
+//  position:relative;
+}
+.teaser.app-small .info {
+  height:auto;
+}
+
+// ##### 3.4.6.1 :: teaser element text-body; container > info > price #################################################
+.teaser .info-price {
+  overflow: hidden;
+  position: absolute;
+  bottom: 12/@em;
+  right: 5/@em;
+}
+.teaser.app-search .info-price {
+    bottom: 4/@em;
+    line-height: 16/@em;
+}
+.teaser .price {
+  font-size:13/@em;
+  color: @text-grey;
+//  padding:3/13em 0 4/13em;
+}
+.teaser:hover .price {
+  color: @chip-blue;
+}
+
+//.teaser.app-large .info-price {
+//  position: absolute;
+//  bottom: 5/@em;
+//  right: 5/@em;
+//  width: 200/@em;
+//  height:30/@em;
+//}
+//.teaser.listing .info-price,
+//.teaser.listingnoimg .info-price {
+//  padding-top:3/@em;
+//  height:20/@em;
+//}
+//.teaser.listingnoimg .info-price {
+//  bottom: 25/@em;
+//}
+//.teaser.small .info-price {
+//  overflow: visible;
+//}
+
+// ##### 3.4.6.2 :: teaser element text-body; container > info > rating ################################################
+.teaser.app-small .rating {
+  margin-bottom: 5/@em;
+}
+.teaser.app-small .rating:last-child {
+  margin-bottom: 0;
+}
+//.teaser.listing .rating {
+//  z-index: 1;
+//  position: relative;
+//}
+//.teaser.listing .rating-chip img {
+//  padding-bottom:1px;
+//}
+
+
+/*
+
+// ##### teaser element price ##########################################################################################
+.teaser .price {
+  position: absolute;
+  right:0;
+  z-index:1;
+//background-color:@light-grey;
+//text-align:center;
+//min-width:68/261*100%;
+//.rounded();
+  font-size:13/@em;
+  color:@text-grey;
+  padding:3/13em 0 4/13em;
+}
+.teaser.small .price{
+  float:left;
+  position: relative;
+}
+.teaser.small .text-body, .teaser.small .info {
+  position:static;
+}
+.teaser.small .info {
+  height:auto;
+}
+.teaser.listing .price,
+.teaser.listingnoimg .price{
+  right:10/13em;
+  top:3/13em;
+}
+.teaser.listingnoimg .price {
+//  min-width: 20.7%;
+}
+.teaser.app-large .price{
+  right: 5/13em;
+  bottom: 0;
+// min-width:68/261*100% * 2;
+}
+
+// ##### teaser element rank ###########################################################################################
+.teaser .rank {
+  float:left;
+  width:100%;
+  font-size:11/@em;
+  height:11/@em;
+  padding:6/11em 0 6/11em 3/11em;
+  margin:0;
+  overflow:hidden;
+}
+
+// ##### teaser element rating #########################################################################################
+.teaser.listing .rating {
+  z-index: 1;
+  position: relative;
+}
+//.teaser.listing .rating-chip img {
+//  padding-bottom:1px;
+//}
+.teaser.small .rating {
+  margin-bottom: 5/@em;
+}
+.teaser.small .rating:last-child {
+  margin-bottom: 0;
+}
+
+// ##### teaser element hover effects ##################################################################################
+.teaser:hover {
+  cursor: pointer;
+}
+.teaser:hover {
+  .verticalGradient(#fff, #eee, 70%, 100%);
+  border-bottom-color:#bcbcbc;
+  border-left-color:#efefef;
+  border-right-color:#ddd;
+}
+.teaser.small:hover {
+  background: none;
+  border: none;
+}
+
+// ##### teaser element hover effects:figure ###########################################################################
+.teaser:hover figure {
+  border-color:@light-grey;
+}
+
+// ##### teaser element hover effects:title ############################################################################
+.teaser:hover .title {
+  color:@chip-blue;
+  text-decoration:underline;
+}
+
+// ##### teaser element hover effects:price ############################################################################
+.teaser:hover .price {
+  color:@chip-blue;
+}
+.teaser .price:hover  {
+  text-decoration: none;
+}
+
+
+*/
+
+// ##### teaser in form of a slideshow #################################################################################
+.teaser.slideshow {
+  border-bottom: none;
+//  .row();
+}
+.teaser.slideshow figure,
+.teaser.slideshow figure a {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.teaser.slideshow .slides {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+// height: 220px;
+}
+.teaser.slideshow .prev,
+.teaser.slideshow .next {
+  margin-top: -35px; // Height of Image = 70px
+  opacity: 0.65;
+  position: absolute;
+  top: 50%;
+  .transition(all);
+  width: auto;
+}
+.teaser.slideshow .prev {
+  left: -5px;
+}
+.teaser.slideshow .next {
+  right: -5px;
+}
+.teaser.slideshow .prev span,
+.teaser.slideshow .next span {
+  background: url("../images/fancybox/chip-fancybox-sprite.png") no-repeat scroll 0 -54px transparent;
+  display: block;
+  height: 70px;
+  width: 70px;
+}
+.teaser.slideshow .next span {
+  background-position: 0 -204px;
+}
+
+// ##### teaser slideshow hovering #####################################################################################
+.teaser.slideshow .next:hover,
+.teaser-slideshow .prev:hover {
+  opacity: 1;
+}
+.teaser.slideshow .prev:hover span {
+  background-position: 0 -129px;
+}
+.teaser.slideshow .next:hover span {
+  background-position: 0 -279px;
+}
+
+// ##### teaser slideshow animation ####################################################################################
+.teaser.slideshow .slides li,
+.teaser.slideshow .slides li a,
+.teaser.slideshow .slides li img {
+  display: inline-block;
+  width: 100%;
+}
+.teaser.slideshow .slides li {
+  margin-left: -100%;
+  opacity: 0;
+  .transition(all,0.4s, ease-out);
+}
+.teaser.slideshow .slides li.active {
+  margin-left: 0%;
+  opacity: 1;
+  transition-delay:0s;
+}
+.teaser.slideshow .slides li.active + li {
+  margin-left: 100%;
+}
+
+// ##### teaser slideshow indicator buttons ############################################################################
+.teaser.slideshow .indicators {
+  @width:85;
+  bottom: 5%;
+  position: absolute;
+  left:(50-(@width/2/692*100))*1%;
+  background-color: #727272; // fallback
+  background-color: rgba(0, 0, 0, 0.5);
+  width:(@width/692*100)*1%;
+  .rounded();
+  height:25/@em;
+  padding:0 6/692*100%;
+}
+.teaser.slideshow .indicators li {
+  float: left;
+  height: 11/@em;
+  width: 11/@em;
+  padding: 7/@em 3/@em;
+}
+.teaser.slideshow .indicators a {
+  display: block;
+  height: 100%;
+  .rounded();
+  background-color: #DBDBDB; // fallback
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.teaser.slideshow .indicators li:hover {
+  height: 15/@em;
+  width: 15/@em;
+  padding: 5/@em 1/@em;
+}
+.teaser.slideshow .indicators li.active a,
+.teaser.slideshow .indicators li:hover a {
+  background-color: #ffffff; // fallback
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/*
+
+
+
+.teaser-list{
+  .row();
+}
+.teaser-list li {
+  .column(4.5);
+  cursor: pointer;
+}
+
+.teaser-list .teaser-small {
+
+}
+
+.teaser-small .text-body:hover a{
+//    .verticalGradient(#fff, #eee, 70%, 100%);
+//    border-bottom-color:#bcbcbc;
+//    border-left-color:#efefef;
+//    border-right-color:#ddd;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.teaser-small figure img {
+  width: 351/@em;
+  height: 105/@em;
+}
+
+.teaser-small .text-body {
+  font-size: 16/@em;
+  margin-bottom: 10/@em;
+  height: 160/@em;
+  overflow: hidden;
+}
+
+.teaser-small .text-body h2 {
+  .h3();
+  margin: 5/@em 0;
+}
+
+
+*/
+
+// ##### teaser - special augmentation #################################################################################
+.teaser.special {
+  border: none;
+}
+.teaser.special figure {
+  border: none;
+  border-radius: 0 0 0 0;
+  float: none;
+  margin: 0;
+  width: auto;
+    max-height: 90px;
+}
+.teaser.special-large figure {
+    max-height: none;
+}
+.teaser.special a {
+  border: medium none;
+  border-radius: 0 0 0 0;
+  box-shadow: none;
+}
+.teaser.special .text-body {
+//  font-size: 16/@em;
+  margin-bottom: 10/@em;
+  margin-left: 0;
+  overflow: hidden;
+}
+.teaser.special .text-body h1 {
+  font-size: 18/@em;
+  font-weight: normal;
+  line-height: 20/@em;//1.22222em;
+  margin: 5/@em 0;
+}
+.teaser.special .description {
+    display: block;
+    font-size: 14/@em;
+    @lem: 14em;
+    line-height: 20/@lem;
+}
+
+// ##### teaser - special augmentation #################################################################################
+.teaser.special,
+.teaser.special:hover {
+    border: solid 1/@em #eee;
+    border-bottom-color: #ccc;
+    .rounded(6);
+    .verticalGradient(#f6f6f6, #eee);
+    padding-bottom: 0;
+}
+.teaser.special figure a {
+    .rounded-top-left(6);
+    .rounded-top-right(6);
+}
+.teaser.special-large figure a {
+}
+.teaser.special .text-body {
+    margin-bottom: 0;
+}
+.teaser.special .text-body h1 {
+    font-size: 14/@em;
+    margin: 4/@em;
+}
+.teaser.special-large .text-body h1 {
+    font-size: 18/@em;
+    margin: 8/@em 4/@em 4/@em 4/@em;
+}
+.teaser.special .text-body h1 a {
+    color: #666;
+    .text-shadow(#fff);
+}

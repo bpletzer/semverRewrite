@@ -1,0 +1,1 @@
+function Song(){}Song.prototype.persistFavoriteStatus=function(){throw Error("not yet implemented")};

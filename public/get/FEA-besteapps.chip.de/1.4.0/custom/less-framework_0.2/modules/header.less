@@ -1,0 +1,146 @@
+/*Header styles*/
+.mobile-header{display:none ! important}
+.desktop-header{display:block ! important}
+
+#top_header {
+  .verticalGradient(#032C8E, #050D46);
+  background-repeat: no-repeat;
+  height: 80/@em;
+  margin:0 0 6/@em;
+  width:100%;
+}
+
+#top_header .desktop-header {
+  height: 80/@em;
+  margin: 0 auto;
+  position: relative;
+  width: (((@column + @gutter * 2) * 12) + @gutter * 2)/@em;
+}
+
+#top_header .desktop-header .header-logo {
+  left: 10/@em;
+  position: absolute;
+  top: 12/@em;
+  z-index: 25;
+}
+
+#top_header .desktop-header #main_menu {
+  .verticalGradient(#efefef, #c5c5c5);
+  border-bottom: 2/@em solid #9cf;
+  height: 24/@em;
+  width: (((@column + @gutter * 2) * 12) + @gutter * 2)/@em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#top_header .desktop-header ul {
+  padding-left: 165/@em;
+  height: 23/@em;
+  border-bottom: 1/@em solid #fff;
+  width: ((((@column + @gutter * 2) * 12) + @gutter * 2)-165)/@em;
+}
+#top_header .desktop-header li {
+  float: left;
+  height: 23/@em;
+}
+
+
+
+#top_header .desktop-header li a {
+  font-size: 13/@em;
+  @lem:13em;
+  display: block;
+  height: 15/@lem;
+  line-height: 15/@lem;
+  padding: 3/@lem 22/@lem 5/@lem 6/@lem ;
+  border-left: 1/@lem solid #fff;
+  border-right: 1/@lem solid #8A8A8A;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  background-image: url(../images/tooltip.png);
+  background-position:100% 10px;
+  background-repeat:no-repeat;
+}
+
+
+#top_header .desktop-header li:first-child a {
+  border-left-width:0;
+}
+#top_header .desktop-header li:last-child a {
+  border-right-width:0;
+}
+#top_header .desktop-header li:hover {
+  .verticalGradient(#ddeeff, #b0d8ff);
+}
+#top_header .desktop-header li a:hover {
+  border-color:#9dceff;
+  text-decoration: underline;
+}
+#top_header .desktop-header li:first-child a:hover {
+  @lem:13em;
+  border-left-width:1/@lem;
+  padding-left:5/@lem;
+}
+#top_header .desktop-header li:last-child a:hover {
+  @lem:13em;
+  border-right-width:1/@lem;
+  padding-right:21/@lem ;
+}
+/* exception for header v1 */
+/* exception for header v1 */
+/* exception for header v1 */
+/* exception for header v1 */
+/* exception for header v1 */
+#top_header .desktop-header li a {
+  @lem:13em;
+  background: none;
+  padding-right: 8/@lem;
+  padding-left: 8/@lem;
+}
+#top_header .desktop-header li:first-child a:hover {
+  @lem:13em;
+  padding-left:7/@lem;
+}
+/* end of exception for header v1 */
+/* end of exception for header v1 */
+/* end of exception for header v1 */
+/* end of exception for header v1 */
+/* end of exception for header v1 */
+#top_header .desktop-header #search {
+  background-color: #495a92;
+  .rounded(2);
+  bottom: 10/@em;
+  display: block;
+  left: 170/@em;
+  padding: 5/@em 6/@em;
+  position: absolute;
+  border-top:1/@em solid #5e6fa6;
+  border-left:1/@em solid #5e6fa6;
+}
+
+#top_header .desktop-header #suche_header_input {
+  font-size:15/@em;
+  @lem:15em;
+  height:14/@lem;
+  line-height:14/@lem;
+  padding: 4/@lem;
+  width: 246/@lem;
+  border:1/@lem solid #D27D00;
+  .rounded(2);
+}
+
+#top_header .desktop-header #search button {
+  font-size: 13/@em;
+  @lem:13em;
+  .verticalGradient(#fde4a3, #fd9900);
+  border:1/@lem solid #D27D00;
+  height:23/@lem;
+  line-height:15/@lem;
+  color: #b12000;
+  font-weight: bold;
+  width: 90/@lem;
+  text-transform: uppercase;
+  cursor:pointer;
+}

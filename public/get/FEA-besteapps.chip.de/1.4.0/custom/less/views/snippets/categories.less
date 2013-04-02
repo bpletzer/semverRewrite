@@ -1,0 +1,210 @@
+.category-menu {
+	background-color: #ffffff;
+	margin: 0 0 13/@em 0;
+	max-height: 100%;
+	overflow: auto;
+}
+.category-menu.chip {
+    margin-bottom:20/@em;
+}
+.category-menu ul.categories {
+    .rounded(3);
+//    margin-top:6/@em;
+    border: 1/@em solid #eee;
+    border-bottom: 3/@em solid #ccc;
+}
+
+.category-menu ul.categories li:first-child {
+    font-weight: 700;
+}
+
+// ***** Category-Menu Links *******************************************************************************************
+.category-menu a {
+  color: @text-grey;
+  .text-shadow(#fff, 0, 2, 0);
+  text-decoration: none;
+}
+.category-menu a:hover {
+  text-decoration: underline;
+  color: @chip-blue;
+}
+.category-menu a {
+  .text-shadow(transparent, 0, 0, 0);
+}
+
+// ***** Category-Menu Header ******************************************************************************************
+.category-menu h3 {
+    .h4();
+    color: @text-grey;
+    @lem:14em;
+  .verticalGradient(#f6f6f6, #eee);
+  .rounded(3);
+  margin-bottom: 10/@lem;
+  border: 1/@lem solid #eee;
+  border-bottom: 3/@lem solid #ccc;
+  font-weight: bold; // overwrite font-weight from .h4()
+  margin: 0; // overwrite margin from .h4()
+  position: relative;
+  height: 50/@lem;
+    line-height: 50/@lem;
+    padding-left: 12/@lem;
+}
+.category-menu h3.active {
+  filter: none;
+  background-color: @chip-blue;
+  border-color: @chip-blue @chip-blue #004B94 @chip-blue;
+  background-image: none;
+}
+.category-menu h3.active a{
+  color: #fff;
+}
+
+// ***** N.1 :: leading icons ******************************************************************************************
+.leading-icon:before {
+  @lem:14em;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: url('../images/icons-sprite-all.png');
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 30px; width: 30px;
+  margin-right: 10/@lem;
+  vertical-align: middle;
+}
+.leading-icon.icon-chip-small:before {
+  background-position: 0 -704px;
+  height: 22px; width: 22px;
+}
+.leading-icon.icon-chip:before {
+  background-position: 0 -776px;
+}
+
+.leading-icon.icon-ios-small:before {
+  background-position: 0 -392px;
+  height: 22px; width: 22px;
+}
+.leading-icon.icon-ios:before {
+  background-position: 0 -624px;
+}
+.leading-icon.icon-ios:hover:before {
+  background-position: 0 -544px;
+}
+.active .leading-icon.icon-ios:before {
+  background-position: 0 -464px;
+}
+
+.leading-icon.icon-android-small:before {
+  background-position: 0 0px;
+  height: 22px; width: 22px;
+}
+.leading-icon.icon-android:before {
+  background-position: 0 -312px;
+}
+.leading-icon.icon-android-green:before {
+  background-position: 0 -152px;
+}
+.leading-icon.icon-android:hover:before {
+  background-position: 0 -232px;
+}
+.active .leading-icon.icon-android:before {
+  background-position: 0 -72px;
+}
+
+
+
+.category-menu h3 a img {
+  display: none;
+//  @lem:14em;
+//  position:absolute;
+//  top: 11/@lem;
+//  left: 12/@lem;
+//  .shadow(1, 1, 0, #fff, @lem);
+}
+.category-menu h3 a span {
+  display: none;
+//  @lem:14em;
+//  background: url("../images/sprite-arrows.png") no-repeat scroll 0 -14px transparent;
+//  display: block;
+//  position:absolute;
+//  top: 20/@lem;
+//  right: 12/@lem;
+//  width: 12/@lem;
+//  height: 12/@lem;
+}
+.category-menu h3 a:hover span {
+//  background: url("../images/sprite-arrows.png") no-repeat scroll 0 -1px transparent;
+}
+
+// ***** Category-Menu List Items **************************************************************************************
+.category-menu li {
+  border-top: 0 solid #f3f3f3;
+  height: 0;
+  overflow: hidden;
+  transition: height 400ms linear;
+  -moz-transition: height 400ms linear; /* Firefox 4 */
+  -webkit-transition: height 400ms linear; /* Safari and Chrome */
+  -o-transition: height 400ms linear; /* Opera */
+  -ms-transition: height 400ms linear; /* IE10 (vielleicht)*/
+}
+// ***** Category-Menu List Items when by default EXPANDED OR list has been EXPANDED ***********************************
+.category-menu li.expanded,
+.category-menu.expanded li {
+  height: 33/@em;
+  margin-top: 0;
+  border-top: 1/@em solid #fff;
+  border-bottom: 1/@em solid #ccc;
+  background-color:#f6f6f6;
+  &:first-child{
+    border-top:none;
+  }
+  &:last-child{
+    border-bottom:none;
+  }
+}
+.category-menu .categories li a {
+  font-size:12/@em;
+  @lem:12em;
+  display: block;
+  height: 33/@lem;
+  line-height: 33/@lem;
+  padding: 0 8/@lem 0 13/@lem;
+}
+
+// ***** Category-Menu ACTIVE/CURRENT Category *************************************************************************
+.category-menu li.current {
+  border-bottom-color:#004b94;
+  border-top-color: @chip-blue;
+}
+.category-menu li.current:hover a {
+    color: #fff;
+}
+.category-menu li.current a {
+  @lem:12em;
+  color: #fff;
+  background-color: @chip-blue;
+  .text-shadow(transparent, 0, 0, 0);
+}
+// ***** Category-Menu MORE/LESS categories ****************************************************************************
+.category-menu li.more-categories a,
+.category-menu li.less-categories a {
+  color: @chip-blue;
+  font-size: 13/@em;
+  text-align: center;
+  text-decoration: underline;
+}
+.category-menu li.less-categories{
+  display: none;
+}
+
+// ***** Category-Menu MORE/LESS categories when EXPANDED **************************************************************
+.category-menu.expanded li.less-categories {
+  display: block;
+}
+.category-menu.expanded li.more-categories {
+  display: none;
+}
+
+nav.sidebar .breadcrumbs a {
+    display: inline-block;
+}

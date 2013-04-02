@@ -1,0 +1,94 @@
+header {
+  margin-left:0;
+  margin-right:0;
+}
+article {
+  .m-complete();
+}
+#app header .date{
+  display: none;
+}
+#app article figure {
+  .m-column(1);
+  padding:0;
+  margin-bottom:16/@em;
+  min-height:0;
+}
+#app article figure a{
+  width:64/68*100%;
+  .rounded(9);
+  border:2px solid @price-grey;
+  height:auto;
+  -moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+}
+#app article figure img{
+  display:block;
+  .rounded(6);
+}
+#app header .text-body {
+  min-height:0
+}
+#app header h1, #app header h1 a{
+  min-height:0;
+  height:auto;
+}
+#app header .rating-chip img{
+  display: block;
+  page-break-before:always;
+  line-height:14/12em;
+}
+#app header .info-ratings {
+  margin-top:0;
+  float:left
+}
+#app header .info-price {
+  margin-top:4/13em;
+  float:right;
+}
+#app header h3 {
+  color:@light-grey;
+  font-size:11/16em;
+  margin:0;
+}
+#app header h1 {
+  font-size:18/20em;
+  @lem:18em;
+  margin-top:4/@lem;
+  margin-bottom:6/@lem;
+}
+#app header .price {
+  font-size:13/@em;
+  @lem:13em;
+  float:right;
+  font-weight:normal;
+  margin-bottom:9/@lem;
+}
+
+#app .social-features {
+    .m-row();
+}
+#app .social-buttons {
+    display:none;
+}
+#app .store-ratings {
+    .m-column(4);
+}
+
+#app .article-body .download-button{
+  width:100%;
+}
+#app .download-button.show-mobile a{
+  .m-column(4);
+  margin-top:0;
+  margin-bottom:25/@em;
+}
+
+#app section.article-body {
+  float:none;
+}
+
+#app section.article-body p{
+  font-size: 13px;
+}

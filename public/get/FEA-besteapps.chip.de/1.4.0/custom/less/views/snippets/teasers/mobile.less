@@ -1,0 +1,44 @@
+.teaser .price {
+  color:@chip-blue;
+}
+
+.teaser.app-large figure {
+  border: 2/@em solid @price-grey;
+  height: auto;
+  .rounded(14.4);
+  width: 60/341*100%;
+}
+.teaser.app-large figure a {
+  .rounded(11);
+}
+
+.teaser-slideshow .indicators {
+  font-size: 1.5em;
+}
+
+// ##### 1 :: teaser container styles ( besteapps.chip.de ) ############################################################
+// ##### 1.1 :: main teaser containers #################################################################################
+.teaser-container.dual,
+.teaser-container.multi {
+  .m-complete();
+}
+
+// ##### 1.2 :: teaser group ###########################################################################################
+.teaser-container.dual .teaser-group {
+  margin: 0;
+  width: inherit;
+}
+
+.teaser-container.dual .dualWrapper {
+  .m-complete();
+}
+
+// ##### 1.3 :: teaser floating list ###################################################################################
+.teaser-container.split-list li {
+  .m-complete();
+}
+
+// ##### 1.5 :: teaser header; full width when directly inside teaser-container ########################################
+.teaser-container .teaser-title {
+  margin-top: 10/@em;
+}

@@ -1,0 +1,1 @@
+jasmine.Reporter=function(){},jasmine.Reporter.prototype.reportRunnerStarting=function(){},jasmine.Reporter.prototype.reportRunnerResults=function(){},jasmine.Reporter.prototype.reportSuiteResults=function(){},jasmine.Reporter.prototype.reportSpecStarting=function(){},jasmine.Reporter.prototype.reportSpecResults=function(){},jasmine.Reporter.prototype.log=function(){};

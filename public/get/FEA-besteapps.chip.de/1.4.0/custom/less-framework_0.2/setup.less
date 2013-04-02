@@ -1,0 +1,40 @@
+@import "core/reset";
+
+@import "fixtures/colors";
+@import "fixtures/em";
+@import "fixtures/fonts";
+@import "fixtures/resolutions";
+@import "fixtures/columns-fix"; 
+
+@import "classes/browser-stacks";
+@import "classes/button-download";
+@import "classes/fonts"; 
+@import "classes/grid-fix"; 
+
+@import "modules/fonts";
+@import "modules/layout";
+@import "modules/layout/desktop";
+@import "modules/header";  
+@import "modules/footer";  
+
+@import "modules/chip-qtip"; 
+@import "modules/rating";
+
+
+
+/******** Hack fuer zentrierte Seite noch auf Pixelbasis ********/
+
+@media screen
+  and (min-width: @desktop-right-min)
+    and (max-width: @desktop-right-max){
+
+      @import "modules/layout/desktop/right";
+
+}
+
+@media screen
+    and (min-width: @desktop-center){
+
+      @import "modules/layout/desktop/center";
+
+}

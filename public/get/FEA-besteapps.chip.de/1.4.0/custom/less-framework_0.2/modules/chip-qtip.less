@@ -1,0 +1,39 @@
+// Within Modules real css will be written
+// HACK: adding body to the selector is a temporary solution so that these rules have priority over those dynamically loaded by requireCSS
+//! Chip tooltip style
+body .ui-tooltip-chip .ui-tooltip-titlebar,
+body .ui-tooltip-chip .ui-tooltip-content{
+  color: #f3f3f3;
+  border:none;
+  text-align:center;
+  position:relative;
+  top:-5/11em;
+  .transparency(8);
+}
+
+body .qtip{
+  font-size:11/@em;
+  width:200/11em;
+  line-height:16/11em;
+  background-image: url(../images/tooltip.png);
+  background-position:center bottom;
+  background-repeat:no-repeat;
+}
+
+body .ui-tooltip-chip .ui-tooltip-content{
+  background-color: #000;
+  border:none; 
+}
+
+body .ui-tooltip-chip .ui-tooltip-titlebar{
+  background-color: #000;
+}
+
+body .ui-tooltip-pos-tr {
+    background-image: url('../images/tooltip-up.png');
+    background-position: 70% top;
+    background-repeat: no-repeat;
+    margin-top: -5px;
+    padding-top: 10px;
+    width: 150/11em;
+}

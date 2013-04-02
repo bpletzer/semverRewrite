@@ -1,0 +1,1 @@
+define(["jquery","vendor/core/mediator"],function(t,e){var n={};return n.init=function(n){t(document.body).append('<div id="fb-root"/>'),require(["http://connect.facebook.net/de_DE/all.js"],function(){var i=n;FB.init({appId:"159909617367779"}),FB.XFBML.parse(i),t(i).removeClass("off"),e.publish("facebook.loaded")})},n});

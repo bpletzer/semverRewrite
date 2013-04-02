@@ -1,0 +1,42 @@
+#top_header {
+  height:48/@em;
+  .m-row();
+  .verticalGradient(#154980, #0E3054);
+  margin-left:0;
+  margin-right:0;
+}
+.desktop-header{display:none ! important}
+
+.mobile-header{
+  display:block ! important;
+  .m-container();
+}
+
+.mobile-header .header-logo {
+  position:absolute;
+  left:@m-gutter+4/320*100%;
+  top:8/@em;
+}
+.mobile-header .header-logo a:hover {
+    background: none;
+    filter: none;
+}
+
+// ##### X :: OS Switcher ##############################################################################################
+.mobile-header .switcher {
+  position:absolute; bottom: auto; right: @m-gutter+4/320*100%; top: 10/@em;
+}
+
+
+.mobile-header .navigation {
+    display: none;
+}
+.mobile-header .menu{
+  background:url(../images/top-menu.png)  3px 5px no-repeat;
+}
+.mobile-header .search{
+  background:url(../images/top-menu.png) 3px -37px no-repeat;
+}
+.mobile-header .login{
+  background:url(../images/top-menu.png) 4px -76px no-repeat;
+}

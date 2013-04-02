@@ -1,0 +1,1 @@
+define(["require","vendor/core/currpage","vendor/core/mediator"],function(e,t,n){var i={},r=function(t,i){e(["require",t.system_req_id],function(e,r){var o;r.setSystemConfig(t);for(o in t._eventMap)r.subscribeEvent(r,t,o);n.publish("system."+i+".init")})};return loadTrackSystems=function(e){var t;i=e;for(t in e)(function(t){r(e[t],t)})(t)},{loadTrackSystems:loadTrackSystems}});

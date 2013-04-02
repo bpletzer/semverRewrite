@@ -1,0 +1,1 @@
+define(["require","vendor/core/mediator","./TrackingSystem","vendor/core/System"],function(e,t,n,i){var r=function(t,r){i.setEventQueue(r),e([t],function(e){var t;i.extend(n,i);for(t in e._eventMap)n.subscribeEvent(n,e,t)})};return r});

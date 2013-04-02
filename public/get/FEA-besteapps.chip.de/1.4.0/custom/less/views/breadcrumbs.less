@@ -1,0 +1,104 @@
+// ***** 1 base style (may not accomplish anything right now) **********************************************************
+.breadcrumbs {
+    .column(12);
+}
+// ***** 1.1 clear the float for the rest of the page ******************************************************************
+.breadcrumbs~.clear {
+  clear: both;
+}
+.breadcrumbs ul {
+    display: table;
+    margin-bottom: 8/@em;
+    table-layout: fixed;
+    width: 100%;
+}
+
+// ***** 2 base list element (container) styles ************************************************************************
+.breadcrumbs li {
+    display: table-cell;
+    max-width: 33.3333%;
+    position: relative;
+    .transition(max-width);
+}
+//.breadcrumbs li:first-child {
+//  margin-left: 0;
+//}
+//.breadcrumbs li:last-child {
+//  margin-right: 0;
+//}
+
+// ***** 3 button styles ***********************************************************************************************
+// ***** 3.1 base styles ***********************************************************************************************
+.breadcrumbs a {
+  @lem: 12em;
+  border: solid 1/@lem #eee;
+  border-bottom: 4/@lem solid #ccc;
+  color: @text-grey;
+  display: block;
+  font-size: 12/@em;
+  height: 31/@lem;
+  line-height: 31/@lem;
+    margin-left: 8/@em;
+  padding: 0 12/@em;
+  .overflow-ellipsis;
+  .rounded(4);
+  .text-shadow(#fff, 0, 2, 0);
+  .verticalGradient(#f6f6f6, #eee);
+}
+
+// ***** 3.2 small arrow for elements coupled with dialog content ******************************************************
+.breadcrumbs a[data-module]::after {
+  @lem: 12em;
+  background: url("../images/pfeil_blau.png") no-repeat scroll 0 0 transparent;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  position: absolute; bottom: 5/@lem; right: 3/@lem;
+  width: 6px;
+}
+
+// ***** 3.2 base element 'back' extends the standard button styles ****************************************************
+.breadcrumbs li.back::before {
+  content: url('../images/back-arrow.png');
+  position: absolute; top: auto; left: auto;
+}
+.breadcrumbs .back a {
+  border-left: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 14px;
+}
+// ***** 3.1.1 base element extensions for back button styles **********************************************************
+.breadcrumbs li.back::after {
+  background: none;
+}
+
+// ***** 3.4.1 base STATE styles ***************************************************************************************
+// ***** 3.4.1 base ACTIVE styles **************************************************************************************
+.breadcrumbs a.current {
+  background: @chip-blue;
+  border-bottom-color: #004b94;
+  color:#fff;
+  text-decoration: none;
+  .text-shadow(transparent, 0, 0, 0);
+}
+.breadcrumbs a[data-module].current::after {
+  background: url("../images/pfeil_weiss.png") no-repeat scroll 0 0 transparent;
+}
+// ***** 3.4.2 base HOVER styles ***************************************************************************************
+.breadcrumbs a:hover {
+  color:@chip-blue;
+  text-decoration: underline;
+}
+.breadcrumbs a.current:hover {
+  color:#fff;
+}
+
+
+
+
+
+
+.navigation .os {
+  position: absolute; bottom: 0.5em; right: 0.5em;
+}

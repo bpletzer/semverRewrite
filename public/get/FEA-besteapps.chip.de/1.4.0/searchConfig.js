@@ -1,0 +1,1 @@
+define({typ:"",max_results:"3",min_letters:"2",searchDelay:"500",useAjax:!0,textfield:{CSSClass:""},fieldValues:{},buttons:{show_searchButton:!0,searchButtonText:"Suchen",searchButtonCSSClass:"searchButton",show_clearButton:!1,clearButtonText:"C",clearButtonCSSClass:"clearButton"},dropdown:{CSSClass:"searchdropdown"}});

@@ -1,0 +1,1 @@
+jasmine.Block=function(e,t,n){this.env=e,this.func=t,this.spec=n},jasmine.Block.prototype.execute=function(e){if(jasmine.CATCH_EXCEPTIONS)try{this.func.apply(this.spec)}catch(t){this.spec.fail(t)}else this.func.apply(this.spec);e()};

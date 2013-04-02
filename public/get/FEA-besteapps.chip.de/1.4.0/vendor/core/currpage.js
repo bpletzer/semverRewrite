@@ -1,0 +1,1 @@
+(function(e,t){var n=(t(),["jquery"]);"function"==typeof define&&define.amd&&define(n,t)})(this,function(e){var t={},n={};return t.get=function(e){return e?n[e]:n},t.set=function(e,t){return"object"==typeof e?n=e:n[e]=t,this},t.map=function(n){var i;return n!==void 0&&t.get("event")===void 0?i=e.extend({},t.get(),{event:n}):void 0},t});

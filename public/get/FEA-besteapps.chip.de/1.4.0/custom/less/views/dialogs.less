@@ -1,0 +1,209 @@
+// ##### 1 :: generic modalBG styles ###################################################################################
+.dialog_modalBG {
+    background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.8);
+    display: none;
+	position: absolute; left: 0; top: 0;
+    width: 100%;
+	z-index: 999;
+}
+.dialog_modalBG.dialog_opened {
+    display: block;
+}
+
+// ##### 2 :: generic dialog styles ####################################################################################
+.dialog {
+    background-color: #ffffff;
+    display: none;
+    padding: 0.25em 0.5em;
+    position: absolute; left: 0; top: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    max-width: 98%;
+    min-width: 250px;
+    overflow: hidden;
+    .rounded(3);
+    .shadow(0, 16, 0, rgba(0,0,0,0.55), @em);
+    .transition(top);
+    z-index: 1000;
+}
+.dialog_opened {
+    display: block;
+}
+// ##### 2.0.1 :: dialog header ########################################################################################
+.dialog .dialog_header {
+    .h4();
+    @lem: 14em;
+    color: @chip-blue;
+    font-size: 16/@lem;
+    line-height: 16/@lem;
+//    margin: 0;
+//    position: relative;
+//    padding: 12/@lem 12/@lem 3/@lem 12/@lem;
+}
+// ##### 2.0.2 :: dialog close button ##################################################################################
+.dialog_close_smallX {
+    background: no-repeat url('../images/close.gif') transparent 50% 50%;
+    direction: ltr; text-indent: 200%;
+    display: block;
+    height: 25px; width: 25px;
+    margin: -1em;
+    padding: 1em;
+    position: absolute; top: 0.25em; right: 0.25em;
+    overflow: hidden;
+}
+
+// ##### 2.0.3 dialog buttons ##########################################################################################
+.dialog .dialog_buttons {
+    margin-top: 10/@em;
+}
+.dialog_buttons li {
+    .verticalGradient(#f6f6f6, #e2e2e2);
+    .rounded();
+    border: 1/@em solid #ccc;
+    display: inline-block;
+    height: 30/@em;
+    white-space: nowrap;
+    position:relative;
+    margin-bottom:5/@em;
+}
+.dialog_buttons li a {
+    font-size:13/@em;
+    @lem:13em;
+    line-height:15/@lem;
+    color: @text-grey;
+    display:block;
+    padding: 7/@lem 8/@lem 0 8/@lem;
+}
+.dialog .button_cancel {
+    float:left;
+}
+.dialog .button_cancel a:hover, .dialog li:hover a {
+    text-decoration: none;
+    color:#666;
+}
+
+.dialog_buttons li.button_ok {
+    @lem:13em;
+    float:right;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: 1/@lem solid #003073;
+    border-bottom-color: #000000;
+    .rounded();
+    .text-shadow(#003073);
+    .verticalGradient (#1f68b5, #174c84, 0, 100%);
+    background-color: #1a5999;
+}
+.dialog_buttons li.button_ok:hover {
+    border-color: #000000;
+    .text-shadow(#003073*0.8, 1 , 1, 4);
+    .verticalGradient(#1f68b5*1.25, #174c84*1.1, 0, 100%);
+    background-color: #3780cd;
+}
+.dialog_buttons li.button_ok a {
+    color: #fff;
+}
+.dialog_buttons li.button_ok:hover a {
+    text-decoration:none;
+}
+
+// ##### 3 :: specific dialog implementations ##########################################################################
+// ##### 3.1 :: navigation dialogs (ex: mobile category selection) #####################################################
+.dialog-navigation {
+}
+// ##### 3.1.1 :: dialog header ########################################################################################
+.dialog-navigation .dialog_header {
+    .h4();
+    @lem: 14em;
+    font-size: 14/@lem;
+    line-height: 14/@lem;
+    margin: 0;
+    padding: 12/@lem 12/@lem 3/@lem 12/@lem;
+}
+// ##### 3.1.2 :: dialog content #######################################################################################
+.dialog-navigation .dialog_content {
+    padding: 0.25em 0.5em;
+}
+.dialog-navigation .dialog_content li {
+    border-width: 1px;
+    font-size: 14/@em;
+}
+
+// ##### 3.2 :: os selection dialog ####################################################################################
+.dialog-osSelection {
+    margin-top: 7em;
+    max-width: 90%;
+    .rounded(16);
+    text-align: center;
+    padding: 0.75em;
+}
+// ##### 3.2.1 :: dialog header ########################################################################################
+.dialog-osSelection .dialog_header {
+    text-align: left;
+}
+.dialog-osSelection h1 {
+    color: @chip-blue;
+    font-size: 18/@em;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    max-width: 65%;
+    text-align: center;
+}
+// ##### 3.2.2 :: dialog content #######################################################################################
+.dialog-osSelection .os-button {
+    display: inline-block;
+    min-width: 45%; max-width: 250px;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+    vertical-align: top;
+}
+.dialog-osSelection .os-button img {
+    border: 2/@em solid #efefef;
+    border-bottom: 4/@em solid #ddd;
+    border-radius: 1em;
+    .box-shadow(~"0 0.1em 0.15em 0.1em #999999"); // ~" => less trick for passing entire css value
+    padding: 22/@em 32/@em 26/@em;
+    margin: 1/@em 0 8/@em;
+    max-width: 100%;
+    .verticalGradient(#ffffff, #efefef);
+}
+.no-touch .dialog-osSelection .os-button:hover img {
+  margin: 0 0 9/@em;
+  padding-bottom:25/@em;
+  border-color:@chip-blue;
+  border-bottom-width:5/@em;
+  .drop-shadow(0, 2/@em, 6/@em,0.6);
+
+}
+.dialog-osSelection .os-button:active img, .no-touch .dialog-osSelection .os-button:active img {
+    .box-shadow(~"inset 0 0.1em 0.25em 0 #999999"); // ~" => less trick for passing entire css value
+    padding: 25/@em 32/@em 28/@em;
+    margin: 2/@em 0 6/@em;
+    .verticalGradient(#efefef, #ffffff);
+    border: 1/@em solid #aaa;
+}
+
+.dialog-osSelection .os-button h3,
+.dialog-osSelection .os-button h4 {
+    color: @chip-blue;
+    font-size: 18/@em;
+    margin: 0;
+}
+.dialog-osSelection .os-button h4 {
+    font-weight: 700;
+}
+.dialog-osSelection .dialog_close_smallX {
+  background: no-repeat url('../images/close_button.png') transparent 50% 50%;
+  right: 0.75em; top: 0.75em;
+}
+
+
+// ###### 3.3 :: OS Warning Dialog (mobile) ############################################################################
+.dialog-osWarning {
+    max-width: 90%;
+}

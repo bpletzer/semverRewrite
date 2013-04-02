@@ -1,0 +1,54 @@
+// ##### 1 :: teaser container styles ( besteapps.chip.de ) ############################################################
+// ##### 1.1 :: main teaser containers #################################################################################
+.teaser-container {
+//  margin-bottom: 10/@em;
+//  padding-top: 10/@em;
+}
+.teaser-container.dual,
+.teaser-container.multi {
+//  .row();
+}
+
+// ##### 1.2 :: teaser group ###########################################################################################
+.teaser-container.dual .teaser-group {
+  .column(4);
+//  border-bottom: solid 1px #ccc;
+//  margin-top: -10px;
+//  padding-top: 10px;
+}
+
+// ##### 1.3 :: teaser floating list ###################################################################################
+.teaser-container.split-list li {
+  .column(4);
+}
+
+// ##### 1.4 :: teaser floating list ( ex: homepage, four-column, small teasers ) ######################################
+.teaser-container.multi li {
+  .column(2);
+}
+
+// ##### 1.5 :: teaser header; full width when directly inside teaser-container ########################################
+.teaser-container > .teaser-title {
+  .column(8);
+}
+
+// ##### 3.3 :: teaser element image  ##################################################################################
+// ##### 3.3.1 :: teaser element image; container ######################################################################
+.teaser figure {
+  width: 60/302*100%;
+//  margin: 0 10/302*100% 0 5/302*100%;
+}
+.teaser.app-large figure  {
+  width: 135/@em;
+  height: 135/@em;
+//  .rounded(28)
+}
+// ##### 3.3.2 :: teaser element image; container > anchor #############################################################
+.teaser.app-large figure a {
+//  .rounded(26)
+}
+
+// ##### 3.4.1 :: teaser element text-body; container ##################################################################
+.teaser.app-large .text-body {
+    padding-bottom: 16/@em;
+}

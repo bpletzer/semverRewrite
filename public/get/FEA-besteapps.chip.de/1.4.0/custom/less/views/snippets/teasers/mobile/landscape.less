@@ -1,0 +1,27 @@
+.hide-teaser {
+   display: none;
+}
+
+// ##### 1.3 :: teaser floating list ###################################################################################
+.teaser-container.split-list li {
+  .m-column(2);
+}
+
+// ##### 1.4 :: teaser floating list ( ex: homepage, four-column, small teasers ) ######################################
+.teaser-container.multi li {
+  .m-column(1.33);
+}
+// ##### 3.4.6.1 :: teaser element text-body; container > info > price #################################################
+.teaser .info-price {
+  bottom: 8/@em;
+}
+
+// ##### 3.3.1 :: teaser element image; container ######################################################################
+.teaser figure {
+  margin-bottom: 18/@em;
+  .rounded(11);
+}
+// ##### 3.3.2 :: teaser element image; container > anchor #############################################################
+.teaser figure a {
+  .rounded(9);
+}

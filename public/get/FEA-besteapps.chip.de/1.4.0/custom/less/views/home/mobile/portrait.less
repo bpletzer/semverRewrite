@@ -1,0 +1,26 @@
+.home .main {
+    display: block;
+    .m-complete();
+}
+#main-home {
+    display: block;
+}
+#main-search,
+#main-teasers {
+    .m-column(4);
+}
+//#main-search {
+//    margin-bottom: 20/@em;
+//}
+
+// ***** teaser bilder fuer die verschiedenen teilen beste-apps ********************************************************
+#main-home #main-teasers .teaser-area {
+    .m-column(2);
+    margin-bottom: 20/@em;
+}
+// damit das letzte zentriert steht
+#main-home #main-teasers .teaser-area:last-child:nth-child(odd) {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,1 @@
+define(["jquery","./jquery.qtip","requireCSS!tooltip/jquery.qtip.css"],function(t){"use strict";return{init:function(e,i){var r=t(e),n=t.extend({style:{classes:"ui-tooltip-chip"},position:{my:"bottom center",at:"top center",target:r}},i);return r.filter("[title]").qtip(n),r.filter(":not([title])").qtip(t.extend(n,{content:{attr:"data-tooltip"}})),r}}});

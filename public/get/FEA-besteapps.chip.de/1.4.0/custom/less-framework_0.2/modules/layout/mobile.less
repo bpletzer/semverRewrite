@@ -1,0 +1,30 @@
+/* Within Modules real css will be written */
+body {
+  font-size:100%; /* 105 */
+  background-color:@page-color;
+}
+.wrapper {
+  float:none;width:100%;
+}
+#container{
+  .m-container();
+  padding-top: 10/@em;
+  background-color:@page-color;
+  padding:0;
+}
+
+side, aside{ 
+  .m-column(4);
+}
+.show-desktop, .show-tablet, .hide-mobile {
+  display:none ! important;
+}
+.hide-desktop, .hide-tablet, .show-mobile {
+  display:inline-block ! important;
+}
+#currpage {
+  font-size: 0;
+}
+//.labs {
+//  margin:-6px -@m-gutter 6px;
+//}

@@ -1,0 +1,95 @@
+@import "fixtures/colors";
+@import "fixtures/em"; 
+@import "fixtures/fonts";
+@import "fixtures/resolutions";
+@import "fixtures/columns-fix"; 
+
+@import "classes/browser-stacks";
+@import "classes/button-download";
+@import "classes/fonts"; 
+@import "classes/grid-fix"; 
+
+/*********** Tablet ***********/
+@media screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min)
+    and (max-device-width: @tablet-device-max)
+    and (-webkit-min-device-pixel-ratio: 1),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min-15)
+    and (max-device-width: @tablet-device-max-15)
+    and (-webkit-min-device-pixel-ratio: 1.5),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min-2)
+    and (max-device-width: @tablet-device-max-2)
+    and (-webkit-min-device-pixel-ratio: 2),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min)
+    and (max-device-width: @tablet-device-max)
+    and (min-resolution: ~'1dppx'),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min-15)
+    and (max-device-width: @tablet-device-max-15)
+    and (min-resolution: ~'1.5dppx'),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-max)
+    and (min-device-width: @tablet-device-min-2)
+    and (max-device-width: @tablet-device-max-2)
+    and (min-resolution: ~'2dppx'){
+   
+      @import "modules/layout/tablet";
+      @import "modules/header/tablet";
+}
+
+/*********** Tablet Portrait ***********/
+
+@media screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min)
+    and (max-device-width: @tablet-device-max)
+    and (-webkit-min-device-pixel-ratio: 1),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min-15)
+    and (max-device-width: @tablet-device-max-15)
+    and (-webkit-min-device-pixel-ratio: 1.5),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min-2)
+    and (max-device-width: @tablet-device-max-2)
+    and (-webkit-min-device-pixel-ratio: 2),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min)
+    and (max-device-width: @tablet-device-max)
+    and (min-resolution: ~'1dppx'),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min-15)
+    and (max-device-width: @tablet-device-max-15)
+    and (min-resolution: ~'1.5dppx'),
+  screen
+    and (min-width: @tablet-min)
+    and (max-width: @tablet-portrait-max)
+    and (min-device-width: @tablet-device-min-2)
+    and (max-device-width: @tablet-device-max-2)
+    and (min-resolution: ~'2dppx'){
+    
+      @import "modules/layout/tablet-portrait";
+      @import "modules/header/tablet-portrait";
+}

@@ -1,0 +1,1 @@
+(function(e){"function"==typeof define&&define.amd&&define(function(){return e()})})(function(){return function(){var e,t,n={},i=window.location.hash;i=i.substring(1,i.length),e=i.split("&");for(var r=0;e.length>r;r++)t=e[r].split("="),n[unescape(t[0])]=t[1]!==void 0?unescape(t[1]):null;return n}});

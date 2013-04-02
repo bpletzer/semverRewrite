@@ -1,0 +1,22 @@
+define({"success": true, "data": {"keyword": "", "fullscreenspot": false, "providers": [
+	{"media": "content", "pagetype": "NS", "provider": "TFS"},
+	{"media": "tfsskyscraper", "pagetype": "NS", "provider": "TFS"},
+	{"media": "footer", "pagetype": "NS", "provider": "CXO"},
+	{"media": "intellitxt", "pagetype": "NS", "provider": "INTELLI"},
+	{"media": "intellitxt", "pagetype": "BT", "provider": "INTELLI"},
+	{"media": "webtippbt", "pagetype": "NS", "provider": "webtipp"},
+	{"media": "vorschalte", "pagetype": "NS", "provider": "TFS"},
+	{"media": "sponsored-links", "pagetype": "NS", "provider": "CXO"},
+	{"media": "sponsored-links", "pagetype": "BT", "provider": "CXO"},
+	{"media": "story-ad", "pagetype": "NS", "provider": "CXOTEST"},
+	{"media": "browser-bar", "pagetype": "NS", "provider": "CXO"},
+	{"media": "adsense", "pagetype": "NS", "provider": "ADSENSE"},
+	{"media": "content", "pagetype": "BT", "provider": "TFS", chain: ['CXO', 'ADSENSE']},
+	{"media": "top", "pagetype": "BT", "provider": "TFS", chain: ['ADSENSE', 'CXO']},
+	{"media": "tfsskyscraper", "pagetype": "BT", "provider": "TFS"},
+	{"media": "footer", "pagetype": "BT", "provider": "TFS"},
+	{"media": "adsense", "pagetype": "BT", "provider": "ADSENSE"}
+	/*{"media": "adsense", "pagetype": "BG", "provider": "ADSENSE"},
+	 {"media": "adsense", "pagetype": "GF", "provider": "ADSENSE"},
+	 {"media": "adsense", "pagetype": "AW", "provider": "ADSENSE"}*/
+]}});

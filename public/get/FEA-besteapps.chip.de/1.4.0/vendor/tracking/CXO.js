@@ -1,0 +1,1 @@
+define(["module","vendor/core/System","./TrackingSystem"],function(e,t,n){var i=t.inherit(t);return i.extend(i,n),i.img=document.createElement("img"),i.systemId=e.id,i.track=function(){this.img.src="http://x.chip.de/collect?test=hhaa"},i});

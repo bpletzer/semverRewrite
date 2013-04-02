@@ -1,0 +1,1 @@
+define(function(){var e=1e4;return{get:function(){return e+=1,(+new Date).toString(36)+e.toString(36)}}});

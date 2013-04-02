@@ -1,0 +1,1 @@
+define(["require","module","./AdSystem"],function(e,t,n){var i=n.inherit(n);return i.SYSTEM_ID=t.id,i});

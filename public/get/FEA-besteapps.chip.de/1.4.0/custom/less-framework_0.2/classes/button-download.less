@@ -1,0 +1,36 @@
+/* Rough and Quick Preset for Download-Buttons and Ratings*/
+
+.buttonDownload (@em:@em, @colorStart:#1f68b5, @colorEnd:#174c84, @borderColor:#003073, @postionStart:0, @positionEnd:100%){ 
+  color:#fff;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-align:center;
+  border:1/@em solid @borderColor;
+  border-bottom-color:#000;
+  .rounded();
+  display: block;
+  height:38/@em;
+  .text-shadow(@borderColor);
+  .verticalGradient (@colorStart, @colorEnd, @postionStart, @positionEnd);
+  background-color:#1a5999;
+  span {
+    display:block;
+    height:20/@em;
+    padding:5/@em 20/@em 11/@em;
+    border-top:1/@em solid #609bed;
+    border-bottom:2/@em solid @borderColor;
+  }
+}
+.buttonDownloadHover (@em:@em, @colorStart:#1f68b5, @colorEnd:#174c84, @borderColor:#003073, @postionStart:0, @positionEnd:100%){
+  border-color:#000;
+  text-decoration:none;
+  .text-shadow(@borderColor*0.8, 1 , 1, 4);
+  .verticalGradient (@colorStart*1.25, @colorEnd*1.1, @postionStart, @positionEnd);
+  background-color:#3780cd;
+  span {
+    border-top-color:#85b3f2;
+    border-bottom-color:#000; 
+  }
+}
+ 

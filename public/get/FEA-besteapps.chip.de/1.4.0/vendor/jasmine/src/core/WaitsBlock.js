@@ -1,0 +1,1 @@
+jasmine.WaitsBlock=function(e,t,n){this.timeout=t,jasmine.Block.call(this,e,null,n)},jasmine.util.inherit(jasmine.WaitsBlock,jasmine.Block),jasmine.WaitsBlock.prototype.execute=function(e){jasmine.VERBOSE&&this.env.reporter.log(">> Jasmine waiting for "+this.timeout+" ms..."),this.env.setTimeout(function(){e()},this.timeout)};

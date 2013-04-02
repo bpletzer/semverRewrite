@@ -1,0 +1,52 @@
+/* Within Modules real css will be written */
+
+
+.wrapper {
+    float: left;
+    width: 1106px;
+}
+.htmlQueue {
+    clear: both;
+}
+.wrapper, .bad-wrapper {position:relative;}
+.ad-left {display:none}
+.ad-top {
+  background: @body-color;
+}
+
+
+#container {
+  width: ((@column + @gutter * 2) * 12)/@em;
+  float:left;
+  padding: 0 @gutter/@em;
+  background-color:@page-color;
+}
+#container .main{
+  overflow:hidden;
+}
+#container .main .navigation {
+  margin-bottom: 10/@em;
+}
+
+.desktop-header{float:left}
+
+
+.hide-dektop, .show-tablet, .show-mobile {
+  display:none;
+}
+.show-desktop, .hide-tablet, .hide-mobile {
+  display:block;
+}
+.labs {
+  font-size:11/@em;
+  @lem:11em;
+  text-transform: uppercase;
+  color:#6e6503;
+  background-color:#ffecab;
+  display:block;
+  margin:0 -5/@lem 6/@lem -5/@lem ;
+  padding:6/@lem 10/@lem;
+}
+#currpage {
+  font-size: 500px;
+}

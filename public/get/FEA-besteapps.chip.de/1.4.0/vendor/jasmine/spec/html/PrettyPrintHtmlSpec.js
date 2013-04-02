@@ -1,0 +1,1 @@
+describe("jasmine.pp (HTML Dependent)",function(){it("should stringify HTML nodes properly",function(){var e=document.createElement("div");e.innerHTML="foo<b>bar</b>",expect(jasmine.pp(e)).toEqual("HTMLNode"),expect(jasmine.pp({foo:e})).toEqual("{ foo : HTMLNode }")})});

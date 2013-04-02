@@ -1,0 +1,58 @@
+<script>
+    (function (window) {
+        var host, port, offset, base, storage, storageKey, cookieArray, cookieCount, cookieKey, cookieValue;
+
+        storageKey = 'cxodev';
+
+        if (window.localStorage) {
+
+            storage = JSON.parse(unescape(window.localStorage.getItem(storageKey)));
+        } else {
+
+            cookieArray = document.cookie.split(";");
+            for (cookieCount = 0; cookieCount < cookieArray.length; cookieCount++) {
+
+                cookieKey = (cookieArray[cookieCount].split('=')[0]).replace(/^\s+|\s+$/g, "");
+
+                if (storageKey === cookieKey) {
+
+                    storage = JSON.parse(unescape(cookieArray[cookieCount].split('=')[1]));
+                    break;
+                }
+            }
+        }
+
+        if (storage && storage.use) {
+            storage = storage.settings[storage.use];
+
+            storage.use = true;
+
+            if (storage.styleElmt && storage.styleElmtValue) {
+                document.body.style[storage.styleElmt] = storage.styleElmtValue;
+            }
+            storage.bak = window.storage;
+            window.storage = storage;
+
+            if (storage.host.indexOf("chip.de", this.length - "chip.de".length) === -1
+                && storage.host.indexOf("cxo.name", this.length - "cxo.name".length) === -1) {
+                return;
+            }
+
+            host = storage.host;
+            port = storage.port || '80';
+            offset = storage.offset || '/';
+            base = storage.base = 'http://'+host+':'+port+offset;
+
+            document.write('<script src="' + base + '/dev_js_csi.js"><' + '/script>');
+        }
+    })(this);
+</script>
+
+<script>
+    if (window.storage && window.storage.use) {
+        window.storage = window.storage.bak
+        document.write('<noscript>');
+    }
+</script>
+<script src="http://www.chip.de/fec/besteapps.chip.de/1.4.0/vendor/requirejs/require.js" data-main="http://www.chip.de/fec/besteapps.chip.de/1.4.0/hook.js"></script>
+</noscript>

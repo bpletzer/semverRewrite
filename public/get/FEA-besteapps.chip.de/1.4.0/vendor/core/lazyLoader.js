@@ -1,0 +1,1 @@
+define(["./annotationsLoader","jquery","vendor/jquery-plugins/jquery.inview.def"],function(e,t){var n={init:function(e,n,i){t(e).one(n,function(){t(e).attr("data-module",i),require([i],function(t){t.init.apply(t,[e])})})}};return n});

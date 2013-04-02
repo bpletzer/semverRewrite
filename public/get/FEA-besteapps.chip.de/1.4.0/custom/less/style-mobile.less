@@ -1,0 +1,120 @@
+@import "../less-framework_0.2/setup-mobile";
+
+
+
+/*********** Mobile Portrait and Landscape ***********/
+
+@media screen
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max )
+    and (-webkit-min-device-pixel-ratio: 1),
+  screen
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-15 )
+    and (-webkit-min-device-pixel-ratio: 1.5),
+  screen
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-2 )
+    and (-webkit-min-device-pixel-ratio: 2),
+  screen
+    and (max-width: @mobile-max)
+    and (max-device-width: @mobile-device-max)
+    and (min-resolution: ~'1dppx'),
+  screen
+    and (max-width: @mobile-max)
+    and (max-device-width: @mobile-device-max-15)
+    and (min-resolution: ~'1.5dppx'),
+  screen
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-2)
+    and (min-resolution: ~'2dppx'){
+
+	@import "views/listing/mobile";
+	@import "views/detail/mobile";
+	@import "views/specials/mobile";
+	@import "views/apps-des-tages/mobile";
+	@import "views/home/mobile";
+	@import "views/snippets/teasers/mobile";
+	@import "views/snippets/categories/mobile";
+	@import "views/breadcrumbs/mobile";
+	@import "views/error/mobile";
+	@import "views/snippets/dialogs/mobile";
+}
+/*********** Mobile Portrait  ***********/
+@media screen
+    and (max-width: @mobile-portrait-max )
+    and (max-device-width: @mobile-device-max )
+    and (-webkit-min-device-pixel-ratio: 1),
+  screen
+    and (max-width: @mobile-portrait-max )
+    and (max-device-width: @mobile-device-max-15 )
+    and (-webkit-min-device-pixel-ratio: 1.5),
+  screen
+    and (max-width: @mobile-portrait-max )
+    and (max-device-width: @mobile-device-max-2 )
+    and (-webkit-min-device-pixel-ratio: 2),
+  screen
+    and (max-width: @mobile-portrait-max)
+    and (max-device-width: @mobile-device-max)
+    and (min-resolution: ~'1dppx'),
+  screen
+    and (max-width: @mobile-portrait-max)
+    and (max-device-width: @mobile-device-max-15)
+    and (min-resolution: ~'1.5dppx'),
+  screen
+    and (max-width: @mobile-portrait-max )
+    and (max-device-width: @mobile-device-max-2)
+    and (min-resolution: ~'2dppx'){
+      @import "views/listing/mobile/portrait";
+      @import "views/detail/mobile/portrait";
+      @import "views/specials/mobile/portrait";
+      @import "views/home/mobile/portrait";
+      @import "views/snippets/teasers/mobile/portrait";
+      @import "views/snippets/categories/mobile/portrait";
+      @import "views/breadcrumbs/mobile/portrait";
+
+}
+
+/*********** Mobile Landscape ***********/
+@media screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max)
+    and (-webkit-min-device-pixel-ratio: 1),
+  screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-15)
+    and (-webkit-min-device-pixel-ratio: 1.5),
+  screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-2)
+    and (-webkit-min-device-pixel-ratio: 2),
+  screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max)
+    and (min-resolution: ~'1dppx'),
+  screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-15)
+    and (min-resolution: ~'1.5dppx'),
+  screen
+    and (min-width: @mobile-landscape-min)
+    and (max-width: @mobile-max )
+    and (max-device-width: @mobile-device-max-2)
+    and (min-resolution: ~'2dppx'){
+
+      @import "views/listing/mobile/landscape";
+      @import "views/detail/mobile/landscape";
+      @import "views/specials/mobile/landscape";
+      @import "views/home/mobile/landscape";
+      @import "views/apps-des-tages/mobile/landscape";
+      @import "views/snippets/teasers/mobile/landscape";
+      @import "views/snippets/categories/mobile/landscape";
+      @import "views/breadcrumbs/mobile/landscape";
+
+
+}

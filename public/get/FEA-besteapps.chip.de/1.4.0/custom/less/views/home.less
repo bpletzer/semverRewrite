@@ -1,0 +1,408 @@
+// ***** Content Wrapper - display:table(-cell) allow for vertical-alignment ... overwritten for mobile ****************
+.home .main {
+    display: table;
+    height: 25em;
+    width: 100%;
+}
+
+#main-home {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 16/@em 0;
+}
+
+#main-teasers {
+    .row();
+}
+
+#main-teasers .teaser-area {
+    .column(3);
+    margin-bottom: 20/@em;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+#main-teasers .teaser-area img {
+    margin: 5/@em auto;
+    max-width: 100%;
+}
+
+#main-teasers .teaser-area span {
+    font-size: 16/@em;
+    line-height: 26/@em;
+    text-transform: uppercase;
+    font-family: "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "​Helvetica","​Arial","sans";
+}
+
+// ***** Werbung *******************************************************************************************************
+.ad-right {
+    position:absolute;
+    left: 59.5em;
+    z-index: 990;
+    display: block;
+}
+
+// ***** app suche *********************************************************************************************************
+#main-search {
+  .column(8);
+  float: none;
+  margin: 30/@em auto;
+  overflow: visible;
+  margin-bottom: 100/@em;
+}
+
+#main-search .search_results {
+  float: none;
+  z-index: 10;
+  .noShadow();
+  border: solid 1px lightgrey;
+}
+
+#main-search .search_result {
+  border-bottom: solid 1/@em #e1e1e1;
+}
+#main-search .search_result a {
+    display: block;
+    padding: 5/@em;
+    text-decoration: none;
+}
+
+#main-search .search_result img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35/@em;
+  border-radius: 0.5em;
+}
+
+#main-search .search_result h5 {
+  display: inline-block;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 85%;
+  white-space: nowrap;
+  color: #848484;
+  height: 20/@em;
+}
+
+#main-search .search_result h5 span {
+  font-weight: bold;
+  color: #666666;
+}
+
+#main-search .result_active,
+#main-search .search_result:focus,
+#main-search .search_result:hover {
+  background: @light-border
+}
+
+#main-search form {
+    margin: 0 auto 5/@em auto;
+    max-width: 360/@em;
+    padding: 0 10px;
+    position: relative;
+}
+
+#main-search form div {
+  display: inline-block;
+  position: absolute;
+}
+
+#main-search form label {
+  display: none;
+}
+#main-search form input {
+  background: none;
+  border: solid @light-grey 2/@em;
+    .rounded(6);
+    font-size: 1rem;
+    height: 35/@em;
+    line-height: 1.4rem;
+    margin: 0 -10px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+#main-search form.actionInProgress::after {
+    content: url('../images/search_spinnerX.gif');
+    display: inline-block;
+    position: absolute; right: 0; top: 50%;
+    margin-top: -16px;
+    height: 32px; width: 32px;
+}
+
+#main-search form input:focus {
+  border-color: @chip-blue;
+}
+
+#main-search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute; top: 0.15em; right: 0.15em; bottom: 0.15em;
+}
+
+#main-search button[type=submit] {
+  background: url("../images/zoom.png") no-repeat transparent 0 -2/@em;
+  width: 38/@em;
+  height: 36/@em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 5/@em;
+  cursor: pointer;
+}
+
+#main-search button[type=reset] {
+  display: none;
+}
+
+.accordion .content {
+  display: none;
+}
+.accordion .content.active {
+  display: block;
+}
+
+
+// ***** COMMON Button styles ... später auslagern um auf anderen Seiten auch verwenden zu können **********************
+.button {
+    border: solid 1/@em #eee;
+    border-bottom: 6/@em solid #ccc;
+    .rounded(6);
+    .rounded-bottom-left(6, @em, 12);
+    .rounded-bottom-right(6, @em, 12);
+    .verticalGradient(#f6f6f6, #eee);
+}
+#main-home .teaser-area a:hover .button, // exception to the COMMON rule
+.button:hover {
+    background: @chip-blue;
+    border-color: @chip-blue @chip-blue #004B94 @chip-blue;
+    color: #fff;
+    filter: none;
+    text-decoration: none;
+}
+
+// ***** ABWEICHUNGEN vom standard button style ************************************************************************
+#main-home .teaser-area .button {
+    display: inline-block;
+//    max-width: 100%;
+//    min-width: 75%;
+}
+#main-home .teaser-area a:hover .button.image-primary,
+#main-home .teaser-area .button.image-alt, {
+    display: none;
+}
+#main-home .teaser-area .button.image-primary,
+#main-home .teaser-area a:hover .button.image-alt, {
+    display: block;
+}
+
+#main-teasers .teaser-area .divider-vertical {
+    background: -moz-radial-gradient(ellipse farthest-corner at left center, rgba(191,191,191,0.75) 25%, rgba(238,238,238,0) 95%); /* FF3.6+ */
+    background: -webkit-radial-gradient(left center, ellipse, rgba(191,191,191,0.75) 25%, rgba(238,238,238,0) 95%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(left center, ellipse, rgba(191,191,191,0.75) 25%, rgba(238,238,238,0) 95%); /* Opera 12+ */
+    background: -ms-radial-gradient(left center, ellipse, rgba(191,191,191,0.75) 25%, rgba(238,238,238,0) 95%); /* IE10+ */
+    background-image: radial-gradient(ellipse farthest-corner at left center, rgba(191,191,191,0.75), rgba(191,191,191,0.75) 25%, rgba(238,238,238,0) 95%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    height: 100%; width: 4/@em;
+    position: absolute; right: -@gutter/@em - 2/@em; top: 0;
+}
+
+
+
+#main-teasers .teaser-area a {
+  display: block;
+  font-family: @sans;
+  font-size: 16/@em;
+  line-height: 26/@em;
+}
+#main-teasers .teaser-area a:hover {
+  text-decoration:none;
+}
+
+#main-teasers .teaser-area a::before {
+    border: solid 1/@em #eee;
+    border-bottom: 4/@em solid #ccc;
+    display: block;
+    margin: 1/@em auto 8/@em;
+    max-width: 142/@em;
+    .rounded(6);
+    .rounded-bottom-left(6, @em, 12);
+    .rounded-bottom-right(6, @em, 12);
+    .verticalGradient(#f6f6f6, #eee);
+    .drop-shadow(0,2/@em,2/@em,0.3);
+}
+.no-touch #main-teasers .teaser-area a:hover::before {
+  border-color: @chip-blue;
+  filter: none;
+  .drop-shadow(0,2/@em,4/@em,0.4);
+  margin: 0 auto 9/@em;
+}
+.no-touch #main-teasers .teaser-area a:active::before {
+  .box-shadow(~"inset 0 0.1em 0.25em 0 #999999"); // ~" => less trick for passing entire css value
+  .verticalGradient(#efefef, #ffffff);
+  border: 1/@em solid #aaa;
+  margin: 1/@em auto 8/@em;
+  padding-bottom:3/@em;
+}
+
+
+
+
+
+
+.icon_app-des-tages::before {
+    content: url( '../images/beste_apps-icons-blue-01.png' );
+}
+.icon_newly-tested::before {
+    content: url( '../images/beste_apps-icons-blue-02.png' );
+}
+.icon_favorite-apps::before {
+    content: url( '../images/beste_apps-icons-blue-03.png' );
+}
+.icon_app-specials::before {
+    content: url( '../images/beste_apps-icons-blue-05.png' );
+}
+
+// ##### X :: Screenshot slide teasers ###############################################################################
+.slideshow {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.slideshow li {
+    display: inline;
+    letter-spacing: -5px;
+    margin-right: 0.5em;
+}
+
+.slideshow.zoomable li a {
+    position: relative;
+    display: inline-block;
+}
+.slideshow.zoomable li:first-child a::before {
+    content: url('../images/zoom.png'); // dimensions: 27px x 35px
+    opacity: 0.8;
+    position: absolute; left: 50%; top: 50%;
+    margin: -13.5px 0 0 -17.5px;
+}
+
+// ##### X :: OS Switcher ##############################################################################################
+// switch-bar COMMON measurements
+@button_w: 1.25em;
+@button_padding: 3px;
+@icon_h: 23px;
+@icon_w: @icon_h;
+
+// switch-bar BACKGROUND
+.switcher {
+    .box-shadow(~'inset 2px 3px 15px -5px #000000');
+    display: inline-block;
+    margin: 0 @icon_w + @button_padding;
+    width: @button_w * 2 + 2/@em;
+    padding: 2/@em 3/@em;
+    position: absolute; bottom: 1em; right: 0;
+    .rounded(5);
+    .verticalGradient(#ffffff, #efefef);
+}
+// switch-bar BUTTON (DEFAULT = android)
+.switcher::before {
+    border: 1/@em solid #0A3870;
+    .box-shadow(~'inset 0px 5px 5px -4px #ffffff');
+    content: '';
+    display: block;
+    height: @button_w; width: @button_w;
+    margin-left: 50%; // moves button
+    .rounded(3);
+    .transition(margin-left);
+    .verticalGradient(#3E6CAA, #083060);
+}
+.switcher.disabled::before {
+    border-color: #999999;
+    .verticalGradient(#cccccc, #666666);
+    opacity: 0.6;
+}
+
+.pageos-ios .switcher::before {
+    margin-left: 0%;
+}
+
+// ##### X.X :: Switcher Links #########################################################################################
+// switch common LINK
+.switcher .switch-option {
+    direction: ltr;
+    display: block;
+    position: absolute; bottom: 0; left: 0; right: 0; top: 0;
+    overflow: hidden;
+    text-indent: -2000%;
+}
+// switch ICONs
+.switcher .switch-option::after {
+    content: '';
+    display: block;
+    height: @icon_h; width: @icon_w;
+    margin-top: floor(-@icon_h / 2);
+    position: absolute; top: 50%;
+}
+.switcher.disabled .switch-option::after {
+    opacity: 0.6;
+}
+
+// ##### X.X.1 :: ios Link #####################################################################################
+// ##### ios INACTIVE status (page DEFAULT) => clickable (from outside left OVER entire switch-bar background)
+.switcher .switch-option.ios {
+    left: -@icon_w - @button_padding;
+// right: 0; // the default value
+}
+// ##### ios ACTIVE status => NOT clickable (from outside left only UNTIL switch-bar background)
+.pageos-ios .switcher .switch-option.ios {
+    right: 100%;
+}
+// ##### ios ICON
+.switcher .switch-option.ios::after {
+    background: url('../images/icon-apple-23x23-white_transparent.png') no-repeat;
+    left: 0;
+}
+
+// ##### X.X.2 :: ios Link #####################################################################################
+// ##### android INACTIVE status => clickable (from outside left OVER entire switch-bar background)
+.pageos-ios .switcher .switch-option.android {
+    left: 0;
+}
+// ##### android ACTIVE status (page DEFAULT) => NOT clickable (from outside left only UNTIL switch-bar background)
+.switcher .switch-option.android {
+    left: 100%;
+    right: -@icon_w - @button_padding;
+}
+// ##### android ICON
+.switcher .switch-option.android::after {
+    background: url('../images/icon-android-23x23-white_transparent.png') no-repeat;
+    right: 0;
+}
+
+
+// ##### COMMON :: page-title styles ###################################################################################
+.page-title-group {
+    .column(12);
+    margin-bottom: 16/@em;
+}
+.page-title-group h1,
+.page-title-group h2 {
+    line-height: 1.25;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.page-title-group h1 {
+    font-size: 32/@em;
+}
+.page-title-group h2 {
+    font-size: 14/@em;
+    line-height: 1.25;
+    margin-top: 8/@em;
+}

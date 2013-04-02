@@ -1,0 +1,28 @@
+/* classes only sets less mixins 
+
+.class() {
+  property:value;  
+  property:value;  
+  property:value;  
+  property:value;  
+}
+*/
+/* No css will be written */
+
+/* Column Definitions for fixed Layouts*/
+
+
+.column(@column-count:1, @overflow:hidden, @em:16em) {
+  float:left;
+  overflow:@overflow;
+  width: (((@column + @gutter * 2) * @column-count)- @gutter * 2)/@em;
+  margin-left: @gutter/@em;
+  margin-right: @gutter/@em;
+}
+
+.row(@overflow:hidden){
+  margin-left: -@gutter/@em;
+  margin-right: -@gutter/@em;
+  clear:both;
+  overflow:@overflow;
+}

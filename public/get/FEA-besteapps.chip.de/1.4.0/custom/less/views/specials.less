@@ -1,0 +1,126 @@
+// ##### 0 :: App Specials/Sammlungen ##################################################################################
+.specials-listing .breadcrumbs li,
+.special-detail .breadcrumbs li {
+    display: block;
+    max-width: 100%;
+}
+.specials-listing .breadcrumbs li a,
+.special-detail .breadcrumbs li a {
+    display: inline-block;
+}
+
+.pagina_wrapper {
+    clear: both;
+}
+
+// ##### 1 :: Special Listing Page #####################################################################################
+// ##### 1.1 :: Special Lists ##########################################################################################
+@special-height: 8.375em;
+@special-spacing: 1em;
+.specials-list li {
+    .column(4);
+    display: inline-block;
+    height: @special-height;
+    margin-bottom: @special-spacing;
+    overflow: hidden;
+}
+.specials-listing.first-page li.specials-featured {
+    display: inline-block;
+}
+.specials-list li.specials-featured {
+    display: none;
+    .column(8);
+    margin-bottom: 0;
+    height: (3 * @special-height) + (2 * @special-spacing);
+}
+.specials-list li.specials-featured ul {
+    .row();
+}
+
+.specials-featured li.newest-special {
+    .column(8);
+    height: (2 * @special-height) + @special-spacing;
+    .rounded(6);
+}
+.specials-listing .teaser.special-large p {
+    color: #666;
+    height: 5.0em;
+    margin: 0.25em;
+}
+
+.specials-listing .teaser.special-standard h1 {
+    height: 2.5em;
+}
+
+.first-page .specials-list .special {
+    opacity: 0.75;
+    .transition(opacity,250ms);
+}
+.first-page .specials-featured .special,
+.specials-list .special:hover {
+    opacity: 1;
+}
+
+
+// ##### 2 :: Special Detail Page ######################################################################################
+// ##### 2.1 :: Special Image ##########################################################################################
+.special-detail .special-image {
+    .column(12);
+    border-bottom: solid 1px #ccc;
+    margin-bottom: 16/@em;
+}
+.special-detail .special-image img {
+    width: 100%;
+}
+
+// ##### 2.2 :: Special Description ####################################################################################
+// ##### 2.2.1 :: title ################################################################################################
+.special-detail .special-text {
+    .column(12);
+}
+.special-detail .special-text h1 {
+    color: @text-grey;
+    font-size: 28/@em;
+    margin: 5/@em 0;
+}
+.special-detail .special-text h1 a {
+    color: @chip-blue;
+}
+
+// ##### 2.2.2 :: description ##########################################################################################
+.special-detail .description {
+    clear: both;
+    margin-bottom: 15/@em;
+}
+
+// ##### 2.2.3 :: social media #########################################################################################
+.special-detail .social-features {
+  .row(visible);
+  height: 25px;
+}
+.special-detail .fbClass,
+.special-detail .gpClass {
+  float:left;
+  margin-left:16/@em;
+}
+.special-detail .fbClass {
+  width: 8em;
+}
+.special-detail .social-buttons div:first-child {
+  margin-left: 6/@em;
+}
+
+// ##### 2.3 :: Special App Lists ######################################################################################
+.special-detail .app-list {
+    .column(12);
+}
+.special-detail .app-list ol {
+    .row();
+}
+.special-detail .app-list li {
+    .column(4);
+}
+
+// ##### 2.3.1 :: CHIP Recommendation List #############################################################################
+
+// ##### 2.3.2 :: Similar Apps List ####################################################################################

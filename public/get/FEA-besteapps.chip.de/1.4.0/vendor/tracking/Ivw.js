@@ -1,0 +1,1 @@
+define(["module","./TrackingSystem"],function(e,t){var n=t.inherit(t);return n.SYSTEM_ID=e.id,n.img=document.createElement("img"),n.track_pi=function(e){e.tpl=this.render("http://{{url}}/cgi-bin/ivw/{{typ}}/{{kat}};?r={{ref}}&d={{ran}}",e),this.img.src=e.tpl},n});

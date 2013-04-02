@@ -1,0 +1,1 @@
+define(["jquery"],function(e){var t={},n="module",i=n+"-css",r=n+"-parameters";return t.init=function(o){e("[data-"+n+"]",o).each(function(){var o=this,a=e(o),s=a.data(n),c=a.data(i),l=a.data(r)||"";require([s],function(e){"string"==typeof e?(a.html(e),t.init(o)):e.init.apply(e,[o].concat(l.split(",")))}),c&&require(["requireCSS!"+req.toUrl("css/"+c+".css")])})},t});

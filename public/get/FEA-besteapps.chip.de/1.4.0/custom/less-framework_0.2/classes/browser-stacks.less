@@ -1,0 +1,129 @@
+/* classes only sets less mixins 
+
+.class() {
+  property:value;  
+  property:value;  
+  property:value;  
+  property:value;  
+}
+*/
+/* No css will be written */
+
+/* mixins for browser stacks */
+
+
+.rounded (@value:3, @space:@em) {
+    -webkit-border-radius: @value/@space;
+    -moz-border-radius: @value/@space;
+    -ms-border-radius: @value/@space;
+    -o-border-radius:@value/@space;
+    border-radius: @value/@space;
+}
+.rounded-top-right(@value:3, @em:@em) {
+    -webkit-border-top-right-radius: @value/@em;
+    -moz-border-radius-topright: @value/@em;
+    -ms-border-top-right-radius: @value/@em;
+    -o-border-top-right-radius:@value/@em;
+    border-top-right-radius: @value/@em;
+}
+.rounded-top-left(@value:3, @em:@em) {
+    -webkit-border-top-left-radius: @value/@em;
+    -moz-border-radius-topleft: @value/@em;
+    -ms-border-top-left-radius: @value/@em;
+    -o-border-top-left-radius:@value/@em;
+    border-top-left-radius: @value/@em; 
+}
+.rounded-bottom-right(@value:3, @em:@em, @value2:3) {
+    -webkit-border-bottom-right-radius: @value/@em @value2/@em;
+    -moz-border-radius-bottomright: @value/@em @value2/@em;
+    -ms-border-bottom-right-radius: @value/@em @value2/@em;
+    -o-border-bottom-right-radius:@value/@em @value2/@em;
+    border-bottom-right-radius: @value/@em @value2/@em;
+}
+.rounded-bottom-left(@value:3, @em:@em, @value2:3) {
+    -webkit-border-bottom-left-radius: @value/@em @value2/@em;
+    -moz-border-radius-bottomleft: @value/@em @value2/@em;
+    -ms-border-bottom-left-radius: @value/@em @value2/@em;
+    -o-border-bottom-left-radius:@value/@em @value2/@em;
+    border-bottom-left-radius: @value/@em @value2/@em;
+}
+/* Gradient Browser-Stack for all Browsers*/
+.verticalGradient (@colorStart, @colorEnd, @positionStart:0, @positionEnd:100%){
+    background: @colorEnd; /* Old browsers */
+    background: -moz-linear-gradient(top,  @colorStart @positionStart, @colorEnd @positionEnd); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@positionStart,@colorStart), color-stop(@positionEnd,@colorEnd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  @colorStart @positionStart,@colorEnd @positionEnd); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  @colorStart @positionStart,@colorEnd @positionEnd); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  @colorStart @positionStart,@colorEnd @positionEnd); /* IE10+ */
+    background: linear-gradient(top,  @colorStart @positionStart,@colorEnd @positionEnd); /* W3C */
+    filter: ~"progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr="@colorStart~", EndColorStr="@colorEnd~" )"; /* IE6-9 */
+    zoom:1;
+}
+/* Gradient Browser-Stack for all Browsers*/
+.horizontalGradient (@colorStart, @colorEnd, @positionStart:0, @positionEnd:100%){
+    background: @colorEnd; /* Old browsers */
+    background: -moz-linear-gradient(left, @colorStart @positionStart, @colorEnd @positionEnd); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(@positionStart, @colorStart), color-stop(@positionEnd, @colorEnd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, @colorStart @positionStart, @colorEnd @positionEnd); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, @colorStart @positionStart, @colorEnd @positionEnd); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, @colorStart @positionStart, @colorEnd @positionEnd); /* IE10+ */
+    background: linear-gradient(to right, @colorStart @positionStart, @colorEnd @positionEnd); /* W3C */
+    filter: ~"progid:DXImageTransform.Microsoft.Gradient( GradientType=1, StartColorStr="@colorStart~", EndColorStr="@colorEnd~" )"; /* IE6-9 */
+    zoom:1;
+}
+/* Gradient Browser-Stack for all Browsers*/
+.noGradient (@color:transparent){
+    background: @color;
+    filter: none; /* IE6-9 */
+}
+/* Big blury box-shadow stack */
+.softBlur() {
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+/* All Dynamic Box Shadow Browser Stack */
+.shadow(@offset:3, @blur:1, @spread:1, @color:#ccc, @em:@em){
+    -moz-box-shadow:    @offset/@em @offset/@em @blur/@em @spread/@em @color;
+    -webkit-box-shadow: @offset/@em @offset/@em @blur/@em @spread/@em @color;
+    box-shadow:         @offset/@em @offset/@em @blur/@em @spread/@em @color;
+}
+.noShadow(){
+    -moz-box-shadow:    none;
+    -webkit-box-shadow: none;
+    box-shadow:         none;
+}
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+    -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.top-shadow(@offset-1:1, @offset-2:1,  @color:#ccc, @em:@em){
+    -moz-box-shadow:    0 @offset-1/@em @offset-2/@em 0 @color, inset 0 @offset-1/@em @offset-2/@em rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 0 @offset-1/@em @offset-2/@em 0 @color, inset 0 @offset-1/@em @offset-2/@em rgba(255, 255, 255, 0.3);
+    box-shadow:         0 @offset-1/@em @offset-2/@em 0 @color, inset 0 @offset-1/@em @offset-2/@em rgba(255, 255, 255, 0.3);
+}
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+/* Dynamic text-shadow stack */
+.text-shadow(@color:#333, @x:1, @y:1, @blur:2, @em:@em){
+    text-shadow: @x/@em @y/@em @blur/@em @color;
+//  filter: dropshadow(color=@color, offx=@x, offy=@y);
+}
+
+.transparency(@opacity:5) {
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity="@opacity*10~")";
+    filter: ~"alpha(opacity="@opacity*10~")";
+    opacity: @opacity*0.1;
+}
+
+.transition(@what:all, @duration:.3s, @type:ease-out, @delay:0s) {
+    transition: @what @duration @type @delay;
+    -webkit-transition: @what @duration @type @delay;
+    -moz-transition: @what @duration @type @delay;
+    -o-transition: @what @duration @type @delay;
+}

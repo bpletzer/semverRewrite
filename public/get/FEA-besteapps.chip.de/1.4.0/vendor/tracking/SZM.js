@@ -1,0 +1,1 @@
+define(["module","./TrackingSystem"],function(e,t){function n(e){window.iom.c.apply(window.iom,e)}var i=t.inherit(t),r=[];return i.SYSTEM_ID=e.id,require(["http://script.ioam.de/iam.js"],function(){for(;r.length;)n(r.shift());r.push=n}),i.track_pi=function(e){r.push([{st:this.render("{szm}",e),cp:this.render("{kat}")},1])},i});

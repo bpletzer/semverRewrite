@@ -1,0 +1,54 @@
+/* classes only sets less mixins 
+
+.class() {
+  property:value;  
+  property:value;  
+  property:value;  
+  property:value;  
+}
+*/
+/* No css will be written */
+
+/* Column Definitions for fixed Layouts*/
+
+
+ 
+.width (@column-count : 1, @gutter : @m-gutter, @column : @m-column){
+  width:(@gutter * 2 + @column) * @column-count - @gutter * 2;
+}
+.min-width (@column-count : 1, @gutter : @gutter, @column : @column){
+  min-width:(@gutter * 2 + @column) * @column-count - @gutter * 2;
+}
+.max-width (@column-count : 1, @gutter : @m-gutter-max, @column : @m-column-max){
+  max-width:(@gutter * 2 + @column) * @column-count - @gutter * 2;
+}
+
+/* container setting */
+.m-container(){
+  width:312/320*100%;
+  margin:0 4/320*100%;
+}
+/* within container */
+.m-complete() {
+    padding:0;
+    width:100%;
+    max-width: 633px;
+    margin:0;  
+}
+
+/* column within container */
+
+.m-column (@column-count : 1, @em : @em, @m-gutter : @m-gutter, @m-column : @m-column){
+  .width(@column-count, @m-gutter, @m-column);
+  .min-width(@column-count);
+  .max-width(@column-count, @gutter, @column);
+  margin:0 @m-gutter;
+  float:left;
+}
+
+/* row within column */
+
+.m-row(){
+  margin-left:-@m-gutter;
+  margin-right:-@m-gutter;
+}
